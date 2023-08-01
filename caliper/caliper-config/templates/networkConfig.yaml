@@ -295,7 +295,7 @@ channels:
     
 
     contracts:
-      - id: simplesupplychain
+      - id: electronic-health-record
         version: v1
-        language: golang
-        path: /caliper-chaincode/simplesupplychain
+        language: node
+        path: /caliper-chaincode/electronic-health-record

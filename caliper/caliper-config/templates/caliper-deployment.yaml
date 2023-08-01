@@ -125,8 +125,8 @@ spec:
               name: caliper-network
             - mountPath: /caliper-workload
               name: caliper-workload
-            - mountPath: /caliper-chaincode/simplesupplychain
-              name: caliper-chaincode-simplesupplychain
+            - mountPath: /caliper-chaincode/electronic-health-record
+              name: caliper-chaincode-electronic-health-record
             
             - mountPath: /hyperledger/caliper/workspace/
               name: caliper-workspace
@@ -152,9 +152,9 @@ spec:
         - name: caliper-config
           configMap:
             name: caliper-config
-        - name: caliper-chaincode-simplesupplychain
+        - name: caliper-chaincode-electronic-health-record
           configMap:
-            name: hlf-chaincode--simplesupplychain
+            name: hlf-chaincode--electronic-health-record
         
         - name: peer-msp1
           secret:

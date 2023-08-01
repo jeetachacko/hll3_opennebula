@@ -21,16 +21,13 @@ func main() {
         chaincode, err := contractapi.NewChaincode(new(SmartContract))
 
         if err != nil {
-                fmt.Printf("Error create supplychain chaincode: %s", err)
+                fmt.Printf("Error create supplychain chaincode: %s", err.Error())
+                return
         }
 
         if err := chaincode.Start(); err != nil {
                 fmt.Printf("Error starting supplychain chaincode: %s", err.Error())
         }
-}
-
-func (s *SmartContract) Init(ctx contractapi.TransactionContextInterface) error {
-        return nil
 }
 
 

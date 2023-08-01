@@ -37,7 +37,7 @@ class getAllEHRforActor {
                 contractVersion: 'v1',
                 contractFunction: 'getAllEHRforActor',
                 contractArguments: [`${actor}`],
-                targetOrganizations: targetOrg,
+                //targetOrganizations: targetOrg,
                 invokerIdentity: invkIdent,
 		timeout: 30
             };

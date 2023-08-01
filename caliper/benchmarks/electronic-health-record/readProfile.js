@@ -38,7 +38,7 @@ class readProfile {
                 contractVersion: 'v1',
                 contractFunction: 'readProfile',
                 contractArguments: [ssn, key],
-                targetOrganizations: targetOrg,
+                //targetOrganizations: targetOrg,
                 invokerIdentity: invkIdent,
                 timeout: 30
             };

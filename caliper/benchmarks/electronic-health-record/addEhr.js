@@ -44,7 +44,7 @@ class addEhr {
                 contractVersion: 'v1',
                 contractFunction: 'addEHR',
                 contractArguments: [ssn, `${actor}`, ehr, ehrId],
-                targetOrganizations: targetOrg,
+                //targetOrganizations: targetOrg,
                 invokerIdentity: invkIdent,
 		timeout: 30
             };

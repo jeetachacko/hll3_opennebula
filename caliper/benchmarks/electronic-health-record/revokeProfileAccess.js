@@ -57,7 +57,7 @@ class revokeProfileAccess {
                 contractVersion: 'v1',
                 contractFunction: 'revokeProfileAccess',
                 contractArguments: [ssn, key, `${actor}`],
-                targetOrganizations: targetOrg,
+                //targetOrganizations: targetOrg,
                 invokerIdentity: invkIdent,
                 timeout: 30
             };

@@ -67,7 +67,7 @@ class revokeEhrAccess {
                 contractVersion: 'v1',
                 contractFunction: 'revokeEHRAccess',
                 contractArguments: [ssn, ehrId, key, `${actor}`],
-                targetOrganizations: targetOrg,
+                //targetOrganizations: targetOrg,
                 invokerIdentity: invkIdent,
                 timeout: 30
             };

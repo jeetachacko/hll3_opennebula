@@ -48,7 +48,7 @@ class queryEhr {
                 contractVersion: 'v1',
                 contractFunction: 'viewEHR',
                 contractArguments: [ehrId, `${actor}`],
-                targetOrganizations: targetOrg,
+                //targetOrganizations: targetOrg,
                 invokerIdentity: invkIdent,
                 timeout: 30
             };
