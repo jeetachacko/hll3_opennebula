@@ -24,5 +24,5 @@ source ~/.bashrc
 source ~/.profile
 
 
-yes Y | sudo apt-get install build-essential openssl libssl-dev pkg-config
+sudo apt-get install build-essential openssl libssl-dev pkg-config
 
