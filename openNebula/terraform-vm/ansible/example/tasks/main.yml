@@ -1,0 +1,6 @@
+---
+# tasks file for example
+- name: Update APT source lists
+  apt:
+    update_cache: true
+  become: true

@@ -1,0 +1,47 @@
+---
+# Source: config/templates/network.yaml
+tlsEnabled: false
+useActualDomains: true
+orderer:
+  cluster:
+    enabled: true
+fabric_images:
+  ca:  hyperledger/fabric-ca:1.5.0
+  peer:  hyperledger/fabric-peer:2.2.0
+  tools:  hyperledger/fabric-tools:2.2.0
+  orderer:  hyperledger/fabric-orderer:2.2.0
+  couchdb: hyperledger/fabric-couchdb:0.4.15
+  ccenv:  hyperledger/fabric-ccenv:2.2.0
+
+fabric_ca_loglevel: INFO
+fabric_peer_loglevel: INFO
+fabric_orderer_loglevel: INFO
+use_docker_credentials: false
+
+stateDatabase: goleveldb
+
+network:
+  # used by init script to create genesis block and by peer-org-flow to parse consortiums
+  genesisProfile: OrdererGenesis
+  # used by init script to create genesis block
+  systemChannelID: testchainid
+
+  # defines which organizations will join to which channels
+  channels:
+    - name: mychannel
+    # all peers in these organizations will join the channel
+      orgs: [Org1,Org2,]
+
+  # defines which chaincodes will be installed to which organizations
+  chaincodes:
+    - name: fabcar
+      language: golang
+      path: chaincode/fabcar/go
+      version: v1
+      sequence: 1
+      initFunction: '{\"function\":\"initLedger\",\"Args\":[]}'
+      orgs: [Org1,Org2,]
+      channels:
+        - name: mychannel
+          orgs: [Org1,Org2,]
+          policy: OR ('Org1MSP.member','Org2MSP.member',)

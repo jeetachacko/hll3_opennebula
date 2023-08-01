@@ -1,0 +1,9 @@
+openNebula/terraform-vm/terraform/config.tfvars
+terraform/clouds.yaml
+hosts.ini
+venv
+ansible.log
+k8s_keys/
+ansible.cfg
+git.yaml
+fabric/config/templates/crypto-config

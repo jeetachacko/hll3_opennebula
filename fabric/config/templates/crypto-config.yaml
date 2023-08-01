@@ -1,0 +1,31 @@
+---
+# Source: config/templates/crypto-config.yaml
+# ---------------------------------------------------------------------------
+# "OrdererOrgs" - Definition of organizations managing orderer nodes
+# ---------------------------------------------------------------------------
+OrdererOrgs:
+  # ---------------------------------------------------------------------------
+  # Orderer
+  # ---------------------------------------------------------------------------
+  - Name: OrdOrg1
+    Domain: orgorderer1
+    EnableNodeOUs: true
+    Specs:
+      - Hostname: orderer0
+      - Hostname: orderer1
+      - Hostname: orderer2
+
+# ---------------------------------------------------------------------------
+# "PeerOrgs" - Definition of organizations managing peer nodes
+# ---------------------------------------------------------------------------
+PeerOrgs:
+  - Name: Org1
+    Domain: org1
+    EnableNodeOUs: true
+    Template:
+      Count:  3
+  - Name: Org2
+    Domain: org2
+    EnableNodeOUs: true
+    Template:
+      Count:  3

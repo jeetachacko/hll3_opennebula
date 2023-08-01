@@ -1,0 +1,17 @@
+clouds:
+  mycloud:
+    auth:
+      ################################################################
+      # Edit these values.
+      username: "ge35tix2"
+      password: ""
+      project_name: "ge35tix2"
+      project_id: "e0e41db530424d1d8e8f8cd4f8fe204e"
+      auth_url: "https://cc.lrz.de:5000"
+      ################################################################
+      # The values below should be stay intact, only change if needed.
+      user_domain_name: "ADS"
+    region_name: "RegionOne"
+    interface: "public"
+    identity_api_version: 3
+

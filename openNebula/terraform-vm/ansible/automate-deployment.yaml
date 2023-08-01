@@ -1,0 +1,12 @@
+---
+- hosts: all
+  vars:
+    # Add your deployment variables here. Below "project_path" is just a placeholder.
+    project_path: "~/"
+  remote_user: ubuntu  # This is the default on all of our VMs and bare-metal machines we experiment with.
+  environment:
+    # Add your shell environment variables here. Below "LLVM_CONFIG" is just a placeholder.
+    LLVM_CONFIG: /usr/bin/llvm-config-10
+  roles:
+    - example
+    # Add additional roles here. To add new roles use "ansible-galaxy init ROLE_NAME"
