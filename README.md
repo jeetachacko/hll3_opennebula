@@ -1,4 +1,4 @@
-# **HyperledgerLab **
+# HyperledgerLab
 
 Hyperledger Testbed on Kubernetes Cluster: Automated Deployment of a Distributed Enterprise Blockchain Network for Analysis and Testing
 
