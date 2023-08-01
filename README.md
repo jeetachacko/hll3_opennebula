@@ -81,7 +81,7 @@ vi ./caliper/git.yaml
 ```shell
 ./scripts/caliper_run.sh fabcar
 ```
-##Deletion Scripts
+## Deletion Scripts
 ```shell
 ./scripts/caliper_delete.sh
 ./scripts/network_delete.sh
