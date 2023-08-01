@@ -88,7 +88,7 @@ spec:
             - name: CALIPER_WORKSPACE
               value: /hyperledger/caliper/workspace
             - name: CALIPER_BIND_ARGS
-              value: "-g fs-extra"
+              value: "-g fs-extra unirand deck random-picker read-yaml zipfian-integer fs"
             - name: CALIPER_PROJECTCONFIG 
               value: /caliper-config/caliper.yaml
             - name: CXXFLAGS
@@ -110,6 +110,11 @@ spec:
             - mountPath: /etc/hyperledger/fabric/org2/admin-msp/
               name: peer-admin-msp2
             
+            - mountPath: /etc/hyperledger/fabric/org3/msp/
+              name: peer-msp3
+            - mountPath: /etc/hyperledger/fabric/org3/admin-msp/
+              name: peer-admin-msp3
+            
 
             - mountPath: /etc/hyperledger/fabric/ordorg1-tlsca
               name: ordorg1-tlsca
@@ -120,8 +125,8 @@ spec:
               name: caliper-network
             - mountPath: /caliper-workload
               name: caliper-workload
-            - mountPath: /caliper-chaincode/fabcar
-              name: caliper-chaincode-fabcar
+            - mountPath: /caliper-chaincode/simplesupplychain
+              name: caliper-chaincode-simplesupplychain
             
             - mountPath: /hyperledger/caliper/workspace/
               name: caliper-workspace
@@ -147,9 +152,9 @@ spec:
         - name: caliper-config
           configMap:
             name: caliper-config
-        - name: caliper-chaincode-fabcar
+        - name: caliper-chaincode-simplesupplychain
           configMap:
-            name: hlf-chaincode--fabcar
+            name: hlf-chaincode--simplesupplychain
         
         - name: peer-msp1
           secret:
@@ -208,6 +213,36 @@ spec:
                 path: keystore/key.pem
               - key: cacert.pem
                 path: cacerts/ca.org2-cert.pem
+              - key: tlscacert.pem
+                path: tlscacerts/cert.pem
+        
+        - name: peer-msp3
+          secret:
+            secretName: hlf-peer--org3--peer0-msp
+            items:
+              - key: config.yaml
+                path: config.yaml
+              - key: cert.pem
+                path: signcerts/cert.pem
+              - key: key.pem
+                path: keystore/key.pem
+              - key: cacert.pem
+                path: cacerts/ca.org3-cert.pem
+              - key: tlscacert.pem
+                path: tlscacerts/cert.pem
+
+        - name: peer-admin-msp3
+          secret:
+            secretName: hlf-peer--org3--admin-msp
+            items:
+              - key: config.yaml
+                path: config.yaml
+              - key: cert.pem
+                path: signcerts/cert.pem
+              - key: key.pem
+                path: keystore/key.pem
+              - key: cacert.pem
+                path: cacerts/ca.org3-cert.pem
               - key: tlscacert.pem
                 path: tlscacerts/cert.pem
         

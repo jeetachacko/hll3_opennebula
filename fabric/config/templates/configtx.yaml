@@ -95,6 +95,38 @@ Organizations:
       - Host: peer0.org2
         Port: 7051
 
+  - &Org3
+    Name: Org3MSP
+
+    # ID to load the MSP definition as
+    ID: Org3MSP
+
+    MSPDir: crypto-config/peerOrganizations/org3/msp
+
+    # Policies defines the set of policies at this level of the config tree
+    # For organization policies, their canonical path is usually
+    #   /Channel/<Application|Orderer>/<OrgName>/<PolicyName>
+    Policies:
+      Readers:
+        Type: Signature
+        Rule: "OR('Org3MSP.admin', 'Org3MSP.peer', 'Org3MSP.client')"
+      Writers:
+        Type: Signature
+        Rule: "OR('Org3MSP.admin', 'Org3MSP.client', 'Org3MSP.peer')"
+      Admins:
+        Type: Signature
+        Rule: "OR('Org3MSP.admin')"
+      Endorsement:
+        Type: Signature
+        Rule: "OR('Org3MSP.member')"
+
+    AnchorPeers:
+      # AnchorPeers defines the location of peers which can be used
+      # for cross org gossip communication.  Note, this value is only
+      # encoded in the genesis block in the Application section context
+      - Host: peer0.org3
+        Port: 7051
+
 
 ################################################################################
 #
@@ -180,10 +212,10 @@ Application: &ApplicationDefaults
       Rule: "MAJORITY Admins"
     LifecycleEndorsement:
       Type: Signature
-      Rule: "OutOf(1, 'Org1MSP.member', 'Org2MSP.member', 'Org3MSP.member')"
+      Rule: "OutOf(2, 'Org1MSP.member', 'Org2MSP.member', 'Org3MSP.member')"
     Endorsement:
       Type: Signature
-      Rule: "OutOf(1, 'Org1MSP.member', 'Org2MSP.member', 'Org3MSP.member')"
+      Rule: "OutOf(2, 'Org1MSP.member', 'Org2MSP.member', 'Org3MSP.member')"
 
   # Capabilities describes the application level capabilities, see the
   # dedicated Capabilities section elsewhere in this file for a full
@@ -208,12 +240,12 @@ Orderer: &OrdererDefaults
     - orderer0.orgorderer1:7050
 
   # Batch Timeout: The amount of time to wait before creating a batch
-  BatchTimeout:  2s
+  BatchTimeout:  1s
 
   # Batch Size: Controls the number of messages batched into a block
   BatchSize:
     # Max Message Count: The maximum number of messages to permit in a batch
-    MaxMessageCount:  3000 
+    MaxMessageCount:  500 
 
     # Absolute Max Bytes: The absolute maximum number of bytes allowed for
     # the serialized messages in a batch.
@@ -350,6 +382,7 @@ Profiles:
         Organizations:
           - *Org1
           - *Org2
+          - *Org3
   mychannel:
     Consortium: TheConsortium
     <<: *ChannelDefaults
@@ -358,3 +391,4 @@ Profiles:
       Organizations:
           - *Org1
           - *Org2
+          - *Org3

@@ -29,3 +29,8 @@ PeerOrgs:
     EnableNodeOUs: true
     Template:
       Count:  3
+  - Name: Org3
+    Domain: org3
+    EnableNodeOUs: true
+    Template:
+      Count:  3
