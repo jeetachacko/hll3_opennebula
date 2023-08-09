@@ -94,10 +94,10 @@ spec:
 {{- if or (not $.Values.flow.channel.include) (has $channel.name $.Values.flow.channel.include) }}
   - name: channel--{{ $channel.name }}
     steps:
-    - - name: create-channel--{{ $channel.name }}
-        template: create-channel--{{ $channel.name }}
-    - - name: join-channel--{{ $channel.name }}
-        template: join-channel--{{ $channel.name }}
+#    - - name: create-channel--{{ $channel.name }}
+#        template: create-channel--{{ $channel.name }}
+#    - - name: join-channel--{{ $channel.name }}
+#        template: join-channel--{{ $channel.name }}
     - - name: update-channel--{{ $channel.name }}
         template: update-channel--{{ $channel.name }}
 {{- end }} {{- /* if channel included */ -}}
