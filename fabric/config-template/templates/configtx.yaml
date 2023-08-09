@@ -245,8 +245,8 @@ Orderer: &OrdererDefaults
       Type: ImplicitMeta
       Rule: "ANY Writers"
     Admins:
-      Type: ImplicitMeta
-      Rule: "MAJORITY Admins"
+      Type: {{ .Values.endorsement.type }}
+      Rule: "{{ .Values.endorsement.rule }}"
     # BlockValidation specifies what signatures must be included in the block
     # from the orderer for the peer to validate it.
     BlockValidation:
