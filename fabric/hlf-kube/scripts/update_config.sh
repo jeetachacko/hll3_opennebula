@@ -4,7 +4,7 @@
 # attaches it to config.json and writes output to updated_config.json
 
 #if test "$#" -ne 6; then
-#   echo "usage: update_config.sh <orgID> <configtx.yaml> <config.json> <updated_config.json> <key> <value>" 
+echo "usage: update_config.sh <orgID> <configtx.yaml> <config.json> <updated_config.json> <key> <value>" 
 #   exit 2
 #fi
 
@@ -27,7 +27,7 @@ echo "starting update config.json"
 
 #jq "$key = $value" "$config_json" > "$updated_config_json"
 
-jq ''$(echo $key)' = '$(echo $value)'' "$config_json" > "$updated_config_json" &&
+jq ''$(echo $key)' = "'$(echo $value)'"' "$config_json" > "$updated_config_json" &&
 #echo "updated config.json"
 echo >&2 "-- set {{ $key }} to {{ $value }} and wrote to /work/updated_config.json" 
 
