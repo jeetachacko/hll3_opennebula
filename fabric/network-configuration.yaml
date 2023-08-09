@@ -9,9 +9,9 @@ fabric_images:
 caliper_image: hyperledger/caliper:0.4.2
 
 # Fabric Network Config
-fabric_num_orgs: 3
-fabric_peers_per_org: 3
-fabric_num_orderer: 3
+fabric_num_orgs: 2
+fabric_peers_per_org: 2
+fabric_num_orderer: 2
 fabric_orderer_domain: orgorderer1
 
 # Fabric Orderer Type: Available types are "solo" and "etcdraft"
@@ -30,7 +30,8 @@ fabric_tls_enabled: false
 # Endorsement policy
 endorsement:
   type: "Signature"         # "Signature" or "ImplicitMeta"
-  rule: "OutOf(2, 'Org1MSP.member', 'Org2MSP.member', 'Org3MSP.member')"        # e.g "OR('Org1MSP.member', 'Org2MSP.member')"
+  rule: "OR('Org1MSP.member', 'Org2MSP.member')"
+  #rule: "OutOf(2, 'Org1MSP.member', 'Org2MSP.member', 'Org3MSP.member')"        # e.g "OR('Org1MSP.member', 'Org2MSP.member')"
 
 # Channel configuration
 channels:                   # List of channel objects
@@ -43,11 +44,11 @@ channels:                   # List of channel objects
         version: v1
         initFunctionName: initLedger
         sequence: 1
-      - id: electronic-health-record
-        contractID: electronic-health-record               # NOTE: This should be unique for chaincodes across channels
-        path: "chaincode/electronic-health-record/node"      # NOTE: Relative path to Directory where chaincode file is located options: node,go
-        language: node                                      #node, golang
-        version: v1
+      #- id: electronic-health-record
+      #  contractID: electronic-health-record               # NOTE: This should be unique for chaincodes across channels
+      #  path: "chaincode/electronic-health-record/node"      # NOTE: Relative path to Directory where chaincode file is located options: node,go
+      #  language: node                                      #node, golang
+      #  version: v1
       
 # Logging Level
 fabric_ca_loglevel: "INFO"
