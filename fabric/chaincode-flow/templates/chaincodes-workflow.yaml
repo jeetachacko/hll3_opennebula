@@ -13,6 +13,8 @@ metadata:
   generateName: hlf-chaincodes-
 spec:
   entrypoint: chaincodes
+  podGC:
+    strategy: OnPodSuccess
     
   # additional entries going into /etc/hosts file
   {{- if $.Values.hostAliases }}
