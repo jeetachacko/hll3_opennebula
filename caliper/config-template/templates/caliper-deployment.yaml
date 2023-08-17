@@ -32,50 +32,50 @@ spec:
             /bin/sh <<'EOF'
 
             caliper launch manager
-            echo "Start pushing the generated report.html and caliper.log to the git repository..."
-            ls /hyperledger/caliper/workspace/
+            #echo "Start pushing the generated report.html and caliper.log to the git repository..."
+            #ls /hyperledger/caliper/workspace/
 
             # install yq if it does not exist
-            [ ! -f "/usr/bin/yq" ] && (wget https://github.com/mikefarah/yq/releases/download/v4.2.0/yq_linux_amd64.tar.gz -O - | tar xz)
+            #[ ! -f "/usr/bin/yq" ] && (wget https://github.com/mikefarah/yq/releases/download/v4.2.0/yq_linux_amd64.tar.gz -O - | tar xz)
             
-            report_repo_yaml="/caliper-report-git/git.yaml"
-            project_url=$(./yq_linux_amd64 eval '.project | .url' "$report_repo_yaml")
-            project_access_token=$(./yq_linux_amd64 eval '.project | .access_token' "$report_repo_yaml")
-            git_user_email=$(./yq_linux_amd64 eval '.git_user | .email' "$report_repo_yaml")
-            git_user_name=$(./yq_linux_amd64 eval '.git_user | .name' "$report_repo_yaml")
+            #report_repo_yaml="/caliper-report-git/git.yaml"
+            #project_url=$(./yq_linux_amd64 eval '.project | .url' "$report_repo_yaml")
+            #project_access_token=$(./yq_linux_amd64 eval '.project | .access_token' "$report_repo_yaml")
+            #git_user_email=$(./yq_linux_amd64 eval '.git_user | .email' "$report_repo_yaml")
+            #git_user_name=$(./yq_linux_amd64 eval '.git_user | .name' "$report_repo_yaml")
             
-            if [ -f /caliper-report-git/git.yaml ] 
-              then
-                git config --global user.email "$git_user_email" 
-                git config --global user.name "$git_user_name" 
-                # git clone https://cli:$project_access_token@$project_url
-                NOW_TIMESTAMP="$(date +'%s')"
-                NOW="$(date)"
-                DIR_NAME="report_$NOW_TIMESTAMP"
-                mkdir -p  hyperledgerlab2-reports/
-                if [ -f report.html ] || [ -f caliper.log ]
-                then
-                  cd hyperledgerlab2-reports/
-                  git init
-                  git remote add origin https://cli:$project_access_token@$project_url
-                  git init
-                  git pull --rebase origin master
-                  mkdir $DIR_NAME
-                  cp ../report.html $DIR_NAME/
-                  cp ../caliper.log $DIR_NAME/
-                  git add $DIR_NAME 
-                  git commit -m "Report $NOW"
-                  git push -u origin master
-                  echo "The generated report.html and caliper.log have been successfully pushed to the git repository..."
-                  exit 0
-                else
-                  echo "ERROR: caliper.log or report.html are not generated."
-                  exit 0
-                fi
-              else 
-                echo "ERROR: Please provide correct data in git.yaml, in order to upload the generated report.html to the repository."
-                exit 0
-            fi
+            #if [ -f /caliper-report-git/git.yaml ] 
+            #  then
+            #    git config --global user.email "$git_user_email" 
+            #    git config --global user.name "$git_user_name" 
+            #    # git clone https://cli:$project_access_token@$project_url
+            #    NOW_TIMESTAMP="$(date +'%s')"
+            #    NOW="$(date)"
+            #    DIR_NAME="report_$NOW_TIMESTAMP"
+            #    mkdir -p  hyperledgerlab2-reports/
+            #    if [ -f report.html ] || [ -f caliper.log ]
+            #    then
+            #      cd hyperledgerlab2-reports/
+            #      git init
+            #      git remote add origin https://cli:$project_access_token@$project_url
+            #      git init
+            #      git pull --rebase origin master
+            #      mkdir $DIR_NAME
+            #      cp ../report.html $DIR_NAME/
+            #      cp ../caliper.log $DIR_NAME/
+            #      git add $DIR_NAME 
+            #      git commit -m "Report $NOW"
+            #      git push -u origin master
+            #      echo "The generated report.html and caliper.log have been successfully pushed to the git repository..."
+            #      exit 0
+            #    else
+            #      echo "ERROR: caliper.log or report.html are not generated."
+            #      exit 0
+            #    fi
+            #  else 
+            #    echo "ERROR: Please provide correct data in git.yaml, in order to upload the generated report.html to the repository."
+            #    exit 0
+            #fi
             EOF
           tty: true
           workingDir: /hyperledger/caliper/workspace

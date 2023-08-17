@@ -166,7 +166,9 @@ func (s *SmartContract) Ship(ctx contractapi.TransactionContextInterface, key st
         _ = json.Unmarshal(productAsBytes, product)
 
 	if(product.Status == "1") {
-		return fmt.Errorf("%s is already shipped", key)
+		//return fmt.Errorf("%s is already shipped", key)
+		fmt.Print("%s is already shipped", key)
+        return nil
 
 	}
 	if(product.Status != "0") {

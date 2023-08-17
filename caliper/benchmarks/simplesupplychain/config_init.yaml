@@ -3,12 +3,21 @@ test:
     type: local
     number: 3
   rounds:
+    - label: InitLedger
+      txNumber: 1
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1
+      workload:
+        module: /caliper-workload/InitLedger.js
+
     - label: common
       txDuration: 10
       rateControl:
           type: fixed-rate
           opts:
-            tps: 300
+            tps: 50
       workload:
         module: /caliper-workload/common.js
 
@@ -17,7 +26,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 300
+            tps: 50
       workload:
         module: /caliper-workload/common.js
 
@@ -26,7 +35,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 300
+            tps: 50
       workload:
         module: /caliper-workload/common.js
 
@@ -35,7 +44,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 300
+            tps: 50
       workload:
         module: /caliper-workload/common.js
 
@@ -44,7 +53,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 300
+            tps: 50
       workload:
         module: /caliper-workload/common.js
 
@@ -53,6 +62,6 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 300
+            tps: 50
       workload:
         module: /caliper-workload/common.js

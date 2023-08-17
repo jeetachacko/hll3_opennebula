@@ -32,7 +32,7 @@ while [[ $(kubectl get pods -l name=hlf-peer -o 'jsonpath={..status.conditions[?
 echo "Run channel flow..."
 helm template channel-flow/ -f $FOLDER_NAME/network.yaml -f $FOLDER_NAME/crypto-config.yaml -f $FOLDER_NAME/hostAliases.yaml | argo submit - --watch
 
-sleep 5 
+sleep 5 ∏
 
 echo "Run chaincode flow..."
 helm template chaincode-flow/ -f $FOLDER_NAME/network.yaml -f $FOLDER_NAME/crypto-config.yaml  -f $FOLDER_NAME/hostAliases.yaml | argo submit - --watch
