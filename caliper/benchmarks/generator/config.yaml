@@ -4,22 +4,61 @@ test:
     number: 10
 
   rounds:
-    - label: initLedger
-      txNumber: 10000
-      rateControl:
-          type: fixed-rate
-          opts:
-            tps: 100
-      workload:
-        module: /caliper-workload/initLedger.js
-
     - label: common
-      txNumber: 10000
+      txDuration: 10
       rateControl:
           type: fixed-rate
           opts:
-            tps: 300
+            tps: 350
       workload:
         module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 350
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 350
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 350
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 350
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 350
+      workload:
+        module: /caliper-workload/common.js
+
+
+
 
 

@@ -37,13 +37,27 @@ endorsement:
 channels:                   # List of channel objects
   - name: "mychannel"
     chaincodes:
-      - id: simplesupplychain
-        contractID: simplesupplychain               # NOTE: This should be unique for chaincodes across channels
-        path: "chaincode/simplesupplychain/go"      # NOTE: Relative path to Directory where chaincode file is located options: node,go
+      - id: generator
+        contractID: generator               # NOTE: This should be unique for chaincodes across channels
+        path: "chaincode/generator/go"      # NOTE: Relative path to Directory where chaincode file is located options: node,go
         language: golang                                      #node, golang
         version: v1
-        initFunctionName: initLedger
         sequence: 1
+
+      #- id: fixed-asset
+      #  contractID: fixed-asset               # NOTE: This should be unique for chaincodes across channels
+      #  path: "chaincode/fixed-asset/go"      # NOTE: Relative path to Directory where chaincode file is located options: node,go
+      #  language: golang                                      #node, golang
+      #  version: v1
+      #  sequence: 1
+
+      #- id: simplesupplychain
+      #  contractID: simplesupplychain               # NOTE: This should be unique for chaincodes across channels
+      #  path: "chaincode/simplesupplychain/go"      # NOTE: Relative path to Directory where chaincode file is located options: node,go
+      #  language: golang                                      #node, golang
+      #  version: v1
+      #  initFunctionName: initLedger
+      #  sequence: 1
       #- id: electronic-health-record
       #  contractID: electronic-health-record               # NOTE: This should be unique for chaincodes across channels
       #  path: "chaincode/electronic-health-record/node"      # NOTE: Relative path to Directory where chaincode file is located options: node,go

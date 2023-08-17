@@ -2,7 +2,7 @@
 
 # !TODO! Update hardcoded values
 
-chaincode=simplesupplychain
+chaincode=generator
 tps=(50 100 150 200 250 300 350 400 450 500)
 
 cd /home/ubuntu/hll3_opennebula
@@ -32,4 +32,6 @@ while true; do
     sed -i "s/.*tps.*/            tps: $selectedtps/" /home/ubuntu/hll3_opennebula/caliper/benchmarks/$chaincode/config.yaml
     sed -i 1,200d /home/ubuntu/hll3_opennebula/caliper/caliper-logs.txt
 done
+
+cp /home/ubuntu/hll3_opennebula/caliper/benchmarks/$chaincode/config_init.yaml /home/ubuntu/hll3_opennebula/caliper/benchmarks/$chaincode/config.yaml
 
