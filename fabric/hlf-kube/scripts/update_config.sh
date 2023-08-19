@@ -24,10 +24,20 @@ value=$6
 workdir="/tmp"
 
 echo "starting update config.json"
+echo "key: $key"
+echo "value: $value"
 
-#jq "$key = $value" "$config_json" > "$updated_config_json"
+#jq "$key = $value" "$config_json" > "$updated_config_json" &&
+if [ "$key" = ".channel_group.groups.Orderer.values.BatchSize.value.preferred_max_bytes" ] || [ "$key" = ".channel_group.groups.Orderer.values.ConsensusType.value.metadata.options.snapshot_interval_size" ]; then
+  echo "Multiplying $key with 1000000 to get bytes"
+  multiplier=1000000
+  value=$(( $6 * $multiplier ))
+  jq ''$(echo $key)' = "'$(echo $value)'"' "$config_json" > "$updated_config_json"
+else
+  jq ''$(echo $key)' = "'$(echo $value)'"' "$config_json" > "$updated_config_json"
+fi
 
-jq ''$(echo $key)' = "'$(echo $value)'"' "$config_json" > "$updated_config_json" &&
+#jq ''$(echo $key)' = "'$(echo $value)'"' "$config_json" > "$updated_config_json" &&
 #echo "updated config.json"
 echo >&2 "-- set {{ $key }} to {{ $value }} and wrote to /work/updated_config.json" 
 

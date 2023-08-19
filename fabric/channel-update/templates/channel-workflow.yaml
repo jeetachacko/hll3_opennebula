@@ -157,12 +157,27 @@ spec:
           
           currentValue=$(jq -cr '{{ required "flow.update.key is required!" $.Values.flow.update.key }}' /work/config.json) &&
           echo >&2 "-- parsed {{ $.Values.flow.update.key }} from /work/config.json, value: $currentValue" &&
+          currentValue1=$(jq -cr '{{ required "flow.update.key1 is required!" $.Values.flow.update.key1 }}' /work/config.json) &&
+          echo >&2 "-- parsed {{ $.Values.flow.update.key1 }} from /work/config.json, value: $currentValue" &&
+          currentValue2=$(jq -cr '{{ required "flow.update.key2 is required!" $.Values.flow.update.key2 }}' /work/config.json) &&
+          echo >&2 "-- parsed {{ $.Values.flow.update.key2 }} from /work/config.json, value: $currentValue" &&
+          currentValue3=$(jq -cr '{{ required "flow.update.key3 is required!" $.Values.flow.update.key3 }}' /work/config.json) &&
+          echo >&2 "-- parsed {{ $.Values.flow.update.key3 }} from /work/config.json, value: $currentValue" &&
 
           if test "$currentValue" == '{{ required "flow.update.value is required!" $.Values.flow.update.value }}'; then
             echo >&2 '-- current value is already '{{ $.Values.flow.update.value }}', skipping update'
+          elif test "$currentValue1" == '{{ required "flow.update.pval is required!" $.Values.flow.update.pval }}'; then
+            echo >&2 '-- current value is already '{{ $.Values.flow.update.pval }}', skipping update'
+          elif test "$currentValue2" == '{{ required "flow.update.tval is required!" $.Values.flow.update.tval }}'; then
+            echo >&2 '-- current value is already '{{ $.Values.flow.update.tval }}', skipping update'
+          elif test "$currentValue3" == '{{ required "flow.update.sval is required!" $.Values.flow.update.sval }}'; then
+            echo >&2 '-- current value is already '{{ $.Values.flow.update.sval }}', skipping update'
           else
             /hlf-scripts/update_config.sh {{ $org.Name }}MSP /hlf_config/configtx.yaml /work/config.json /work/updated_config.json {{ $.Values.flow.update.key }} {{ $.Values.flow.update.value }} && 
-            /hlf-scripts/prepare_config_update_block.sh {{ $channel.name }} /work/config.json /work/updated_config.json /work/update.pb && 
+            /hlf-scripts/update_config.sh {{ $org.Name }}MSP /hlf_config/configtx.yaml /work/updated_config.json /work/updated_config1.json {{ $.Values.flow.update.key1 }} {{ $.Values.flow.update.pval }} && 
+            /hlf-scripts/update_config.sh {{ $org.Name }}MSP /hlf_config/configtx.yaml /work/updated_config1.json /work/updated_config2.json {{ $.Values.flow.update.key2 }} {{ $.Values.flow.update.tval }} && 
+            /hlf-scripts/update_config.sh {{ $org.Name }}MSP /hlf_config/configtx.yaml /work/updated_config2.json /work/updated_config3.json {{ $.Values.flow.update.key3 }} {{ $.Values.flow.update.sval }} && 
+            /hlf-scripts/prepare_config_update_block.sh {{ $channel.name }} /work/config.json /work/updated_config3.json /work/update.pb && 
             peer channel update -f /work/update.pb -c {{ $channel.name }} -o {{ $vars.ordererUrl }} 
                 #{{- if $.Values.tlsEnabled }}
                 #    --tls --cafile /hlf_config/orderer-tlsca/tlscacert.pem \
