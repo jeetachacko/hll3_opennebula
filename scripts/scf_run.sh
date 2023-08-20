@@ -26,6 +26,7 @@ cp /home/ubuntu/hll3_opennebula/caliper/benchmarks/$chaincode/config_init.yaml /
 
 cp /home/ubuntu/hll3_opennebula/caliper/benchmarks/$chaincode/config_no_init.yaml /home/ubuntu/hll3_opennebula/caliper/benchmarks/$chaincode/config.yaml
 count=0
+failcount=0
 while true; do
     if [ -f /home/ubuntu/hll3_opennebula/check.txt ]; then
         echo "Network Config Updated!"
@@ -38,18 +39,23 @@ while true; do
     timeout 360s ./scripts/caliper_run.sh $chaincode ; if [ $? -eq 124 ] ; then succ=0 ; else succ=$(printf "%i" $(grep '| common |' /home/ubuntu/hll3_opennebula/caliper/caliper-logs.txt | awk '{print $4}' | tail -n 1)) ; fi
     #succ=$(printf "%i" $(grep '| common |' /home/ubuntu/hll3_opennebula/caliper/caliper-logs.txt | awk '{print $4}' | tail -n 1))
     if [ $succ == 0 ]; then
+        failcount=$((failcount+1))
+        echo "${failcount} Failed - Caliper Restart" >> /home/ubuntu/hll3_opennebula/caliper/failure_logs.txt
         ./scripts/caliper_delete.sh
         sleep 30s
         timeout 360s ./scripts/caliper_run.sh $chaincode ; if [ $? -eq 124 ] ; then succ=0 ; else succ=$(printf "%i" $(grep '| common |' /home/ubuntu/hll3_opennebula/caliper/caliper-logs.txt | awk '{print $4}' | tail -n 1)) ; fi
     fi
 
     if [ $succ == 0 ]; then
+        failcount=$((failcount+1))
+        echo "${failcount} Failed - Fabric Restart"  >> /home/ubuntu/hll3_opennebula/caliper/failure_logs.txt
+        cp /home/ubuntu/hll3_opennebula/caliper/benchmarks/$chaincode/config_init.yaml /home/ubuntu/hll3_opennebula/caliper/benchmarks/$chaincode/config.yaml
         ./scripts/network_delete.sh
         ./scripts/caliper_delete.sh
         sleep 30s
         ./scripts/network_run.sh
         sleep 10s
-        timeout 360s ./scripts/caliper_run.sh $chaincode ; if [ $? -eq 124 ] ; then succ=0 ; else succ=$(printf "%i" $(grep '| common |' /home/ubuntu/hll3_opennebula/caliper/caliper-logs.txt | awk '{print $4}' | tail -n 1)) ; fi
+        timeout 600s ./scripts/caliper_run.sh $chaincode ; if [ $? -eq 124 ] ; then succ=0 ; else succ=$(printf "%i" $(grep '| common |' /home/ubuntu/hll3_opennebula/caliper/caliper-logs.txt | awk '{print $4}' | tail -n 1)) ; fi
     fi
     sed -i 1,200d /home/ubuntu/hll3_opennebula/caliper/caliper-logs.txt
     if [ $count == 1 ]; then
