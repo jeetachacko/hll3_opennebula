@@ -1,0 +1,14 @@
+test:
+  workers:
+    type: local
+    number: 3
+
+  rounds:
+    - label: initLedger
+      txNumber: 10000
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 100
+      workload:
+        module: /caliper-workload/initLedger.js
