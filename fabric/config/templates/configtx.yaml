@@ -208,7 +208,7 @@ Orderer: &OrdererDefaults
     - orderer0.orgorderer1:7050
 
   # Batch Timeout: The amount of time to wait before creating a batch
-  BatchTimeout:  1s
+  BatchTimeout:  2s
 
   # Batch Size: Controls the number of messages batched into a block
   BatchSize:
@@ -222,7 +222,7 @@ Orderer: &OrdererDefaults
     # Preferred Max Bytes: The preferred maximum number of bytes allowed for
     # the serialized messages in a batch. A message larger than the preferred
     # max bytes will result in a batch larger than preferred max bytes.
-    PreferredMaxBytes: 20 MB 
+    PreferredMaxBytes: 2 MB 
 
   EtcdRaft:
     Consenters:

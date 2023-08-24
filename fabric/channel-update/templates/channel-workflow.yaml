@@ -12,8 +12,8 @@ metadata:
   generateName: hlf-channels-
 spec:
   entrypoint: channels
-  podGC:
-    strategy: OnPodSuccess
+#  podGC:
+#    strategy: OnPodSuccess
   
   {{- if .Values.use_docker_credentials }}
   imagePullSecrets:
@@ -42,7 +42,7 @@ spec:
       secretName: {{ $vars.ordererTlsSecret }}
 
 {{- range $i, $org := .Values.PeerOrgs }}
-
+{{- if eq $org.Name "Org1"}}
   - name: peer-{{ $org.Name | lower }}-admin-msp
     secret:
       secretName: hlf-peer--{{ $org.Name | lower }}--admin-msp
@@ -67,10 +67,13 @@ spec:
 
 {{- range $peerIndex := until ($org.Template.Count | int) }}
 {{- $peer := (printf "peer%s" ($peerIndex | toString)) }}
+{{- if eq $peer "peer0"}}
 
   - name: peer-{{ $org.Name | lower }}-{{ $peer | lower }}-tls
     secret:
       secretName: hlf-peer--{{ $org.Name | lower }}--{{ $peer | lower }}-tls
+{{ end }} {{- /* if Peers */ -}}
+{{ end }} {{- /* if PeersOrgs */ -}}
 {{ end }} {{- /* Peers */ -}}
 {{ end }} {{- /* PeerOrgs */ -}}{{""}}
 
@@ -110,7 +113,9 @@ spec:
 {{- range $orgName := $channel.orgs }}
 {{- range $i, $org := $.Values.PeerOrgs }}
 
+
 {{- if eq $orgName $org.Name }}
+{{- if eq $org.Name "Org1"}}
 
 {{- if or $vars.firstStep (not $.Values.flow.update.parallel) }}
     - 
@@ -121,6 +126,7 @@ spec:
 {{- $_ := set $vars "firstStep" false }}
 
 {{- end }} {{- /* if org */ -}} 
+{{- end}} {{- /* if orgName */ -}} 
 {{- end }} {{- /* peer.Orgs */ -}}
 {{- end }} {{- /* channel.orgs */ -}}
 {{- end }} {{- /* if channel included */ -}}
@@ -133,6 +139,7 @@ spec:
 {{- range $i, $org := $.Values.PeerOrgs }}
 
 {{- if eq $orgName $org.Name }}
+{{- if eq $org.Name "Org1"}}
 
   - name: maybe-update-channel--{{ $channel.name }}--{{ $org.Name }}
     inputs:
@@ -209,6 +216,7 @@ spec:
         - name: CORE_PEER_TLS_ROOTCERT_FILE
           value: /etc/hyperledger/fabric/tls/ca.crt
 
+{{- end }} {{- /* if org Name */ -}} 
 {{- end }} {{- /* if org */ -}} 
 {{- end }} {{- /* peerOrgs */ -}}
 {{- end }} {{- /* channel.orgs */ -}}
