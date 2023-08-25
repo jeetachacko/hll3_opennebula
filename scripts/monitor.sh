@@ -28,7 +28,7 @@ while true; do
         pkill -9 -f ./scripts/caliper_run.sh
         pkill -9 -f caliper-manager
         pkill -9 -f caliper-logs.txt
-        sleep 120s
+        sleep 360s
     fi
     #sed -i 1,200d /home/ubuntu/hll3_opennebula/caliper/caliper-logs.txt
     #if [ $count == 1 ]; then

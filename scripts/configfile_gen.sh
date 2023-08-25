@@ -3,8 +3,8 @@
 # !TODO! Update hardcoded values
 
 chaincode=generator
-tps=(50 100 300 500 800 1000)
-num_entries=80
+tps=(10 50 100 500 1000)
+num_entries=20
 num_entries_per_tps=18
 
 cp /home/ubuntu/hll3_opennebula/caliper/benchmarks/$chaincode/config_gen.yaml /home/ubuntu/hll3_opennebula/caliper/benchmarks/$chaincode/config.yaml

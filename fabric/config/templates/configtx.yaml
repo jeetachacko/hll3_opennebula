@@ -62,6 +62,8 @@ Organizations:
       # encoded in the genesis block in the Application section context
       - Host: peer0.org1
         Port: 7051
+      - Host: peer1.org1
+        Port: 7051
 
   - &Org2
     Name: Org2MSP
@@ -93,6 +95,8 @@ Organizations:
       # for cross org gossip communication.  Note, this value is only
       # encoded in the genesis block in the Application section context
       - Host: peer0.org2
+        Port: 7051
+      - Host: peer1.org2
         Port: 7051
 
 
