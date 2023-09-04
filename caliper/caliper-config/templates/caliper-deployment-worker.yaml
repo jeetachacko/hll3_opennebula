@@ -7,8 +7,8 @@ metadata:
     app: caliper-worker
   name: caliper-worker
 spec:
-  parallelism: 10
-  completions: 10
+  parallelism: 20
+  completions: 20
   backoffLimit: 2
   template:
     metadata:
@@ -63,11 +63,6 @@ spec:
             - mountPath: /etc/hyperledger/fabric/org2/admin-msp/
               name: peer-admin-msp2
             
-            - mountPath: /etc/hyperledger/fabric/org3/msp/
-              name: peer-msp3
-            - mountPath: /etc/hyperledger/fabric/org3/admin-msp/
-              name: peer-admin-msp3
-            
 
             - mountPath: /etc/hyperledger/fabric/ordorg1-tlsca
               name: ordorg1-tlsca
@@ -78,8 +73,8 @@ spec:
               name: caliper-network
             - mountPath: /caliper-workload
               name: caliper-workload
-            - mountPath: /caliper-chaincode/electronic-health-record
-              name: caliper-chaincode-electronic-health-record
+            - mountPath: /caliper-chaincode/generator
+              name: caliper-chaincode-generator
             
             - mountPath: /hyperledger/caliper/workspace/
               name: caliper-workspace
@@ -100,9 +95,9 @@ spec:
         - name: caliper-config
           configMap:
             name: caliper-config
-        - name: caliper-chaincode-electronic-health-record
+        - name: caliper-chaincode-generator
           configMap:
-            name: hlf-chaincode--electronic-health-record
+            name: hlf-chaincode--generator
         
         - name: peer-msp1
           secret:
@@ -161,36 +156,6 @@ spec:
                 path: keystore/key.pem
               - key: cacert.pem
                 path: cacerts/ca.org2-cert.pem
-              - key: tlscacert.pem
-                path: tlscacerts/cert.pem
-        
-        - name: peer-msp3
-          secret:
-            secretName: hlf-peer--org3--peer0-msp
-            items:
-              - key: config.yaml
-                path: config.yaml
-              - key: cert.pem
-                path: signcerts/cert.pem
-              - key: key.pem
-                path: keystore/key.pem
-              - key: cacert.pem
-                path: cacerts/ca.org3-cert.pem
-              - key: tlscacert.pem
-                path: tlscacerts/cert.pem
-
-        - name: peer-admin-msp3
-          secret:
-            secretName: hlf-peer--org3--admin-msp
-            items:
-              - key: config.yaml
-                path: config.yaml
-              - key: cert.pem
-                path: signcerts/cert.pem
-              - key: key.pem
-                path: keystore/key.pem
-              - key: cacert.pem
-                path: cacerts/ca.org3-cert.pem
               - key: tlscacert.pem
                 path: tlscacerts/cert.pem
         

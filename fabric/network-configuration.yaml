@@ -11,19 +11,19 @@ caliper_image: hyperledger/caliper:0.4.2
 # Fabric Network Config
 fabric_num_orgs: 2
 fabric_peers_per_org: 2
-fabric_num_orderer: 2
+fabric_num_orderer: 4
 fabric_orderer_domain: orgorderer1
 
 # Fabric Orderer Type: Available types are "solo" and "etcdraft"
 fabric_orderer_type: etcdraft
 
 # stateDatabase - options are "goleveldb", "CouchDB"
-stateDatabase: CouchDB
+stateDatabase: goleveldb
 
 # Batch Timeout: The amount of time to wait before creating a batch
-fabric_batch_timeout: "1s"
+fabric_batch_timeout: "2s"
 # Batch Size: Controls the number of messages batched into a block ["Max Message Count", "Absolute Max Bytes", "Preferred Max Bytes"]
-fabric_batchsize: ["500", "98 MB", "20 MB"]
+fabric_batchsize: ["500", "98 MB", "2 MB"]
 # Enable tls globally in the network
 fabric_tls_enabled: false 
 

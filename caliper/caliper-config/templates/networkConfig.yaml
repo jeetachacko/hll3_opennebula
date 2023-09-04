@@ -9,10 +9,10 @@ caliper:
 
 info:
   Version: 
-  Size: 3 Orgs with 3 Peer
+  Size: 2 Orgs with 2 Peer
   Orderer: etcdraft
   Distribution: Distributed Host
-  StateDB: CouchDB 
+  StateDB: goleveldb 
 
 clients:
   client0.org1.example.com:
@@ -39,18 +39,6 @@ clients:
       clientSignedCert:
         path: /etc/hyperledger/fabric/org2/msp/signcerts/cert.pem
   
-  client0.org3.example.com:
-    client:
-      organization: Org3
-      credentialStore:
-        path: /tmp/hfc-kvs/org3
-        cryptoStore:
-          path: /tmp/hfc-cvs/org3
-      clientPrivateKey:
-        path: /etc/hyperledger/fabric/org3/msp/keystore/key.pem
-      clientSignedCert:
-        path: /etc/hyperledger/fabric/org3/msp/signcerts/cert.pem
-  
 
 organizations:
   Org1:
@@ -59,8 +47,6 @@ organizations:
       - peer0.org1
     
       - peer1.org1
-    
-      - peer2.org1
     
     certificateAuthorities:
       - ca-Org1
@@ -76,30 +62,12 @@ organizations:
     
       - peer1.org2
     
-      - peer2.org2
-    
     certificateAuthorities:
       - ca-Org2
     adminPrivateKey:
       path: /etc/hyperledger/fabric/org2/msp/keystore/key.pem
     signedCert:
       path: /etc/hyperledger/fabric/org2/msp/signcerts/cert.pem
-  
-  Org3:
-    mspid: Org3MSP
-    peers:
-      - peer0.org3
-    
-      - peer1.org3
-    
-      - peer2.org3
-    
-    certificateAuthorities:
-      - ca-Org3
-    adminPrivateKey:
-      path: /etc/hyperledger/fabric/org3/msp/keystore/key.pem
-    signedCert:
-      path: /etc/hyperledger/fabric/org3/msp/signcerts/cert.pem
   
 
 certificateAuthorities:
@@ -118,16 +86,6 @@ certificateAuthorities:
     httpOptions:
       verify: false
     caName: ca-Org2
-    
-    registrar:
-      - enrollId: admin
-        enrollSecret: adminpw
-  
-  ca-Org3: 
-    url: http://hlf-ca--org3.default.svc.cluster.local:7054
-    httpOptions:
-      verify: false
-    caName: ca-Org3
     
     registrar:
       - enrollId: admin
@@ -156,6 +114,13 @@ orderers:
       grpc.keepalive_time_ms: 60000
     
   
+  orderer3:
+    url: grpc://hlf-orderer--ordorg1--orderer3:7050
+    grpcOptions:
+      ssl-target-name-override: orderer3.orgorderer1
+      grpc.keepalive_time_ms: 60000
+    
+  
 
 peers:
   peer0.org1:
@@ -169,13 +134,6 @@ peers:
     url: grpc://hlf-peer--org1--peer1:7051
     grpcOptions:
       ssl-target-name-override: peer1.org1
-      grpc.keepalive_time_ms: 60000
-    
-  
-  peer2.org1:
-    url: grpc://hlf-peer--org1--peer2:7051
-    grpcOptions:
-      ssl-target-name-override: peer2.org1
       grpc.keepalive_time_ms: 60000
     
   
@@ -194,35 +152,6 @@ peers:
       grpc.keepalive_time_ms: 60000
     
   
-  peer2.org2:
-    url: grpc://hlf-peer--org2--peer2:7051
-    grpcOptions:
-      ssl-target-name-override: peer2.org2
-      grpc.keepalive_time_ms: 60000
-    
-  
-
-  peer0.org3:
-    url: grpc://hlf-peer--org3--peer0:7051
-    grpcOptions:
-      ssl-target-name-override: peer0.org3
-      grpc.keepalive_time_ms: 60000
-    
-  
-  peer1.org3:
-    url: grpc://hlf-peer--org3--peer1:7051
-    grpcOptions:
-      ssl-target-name-override: peer1.org3
-      grpc.keepalive_time_ms: 60000
-    
-  
-  peer2.org3:
-    url: grpc://hlf-peer--org3--peer2:7051
-    grpcOptions:
-      ssl-target-name-override: peer2.org3
-      grpc.keepalive_time_ms: 60000
-    
-  
 
 
 channels:
@@ -234,6 +163,8 @@ channels:
       - orderer1
       
       - orderer2
+      
+      - orderer3
        
     peers:
       peer0.org1:
@@ -243,12 +174,6 @@ channels:
         eventSource: true
     
       peer1.org1:
-        endorsingPeer: false
-        chaincodeQuery: true
-        ledgerQuery: true
-        eventSource: false
-    
-      peer2.org1:
         endorsingPeer: false
         chaincodeQuery: true
         ledgerQuery: true
@@ -267,35 +192,10 @@ channels:
         ledgerQuery: true
         eventSource: false
     
-      peer2.org2:
-        endorsingPeer: false
-        chaincodeQuery: true
-        ledgerQuery: true
-        eventSource: false
-    
-    
-      peer0.org3:
-        endorsingPeer: false
-        chaincodeQuery: true
-        ledgerQuery: true
-        eventSource: true
-    
-      peer1.org3:
-        endorsingPeer: false
-        chaincodeQuery: true
-        ledgerQuery: true
-        eventSource: false
-    
-      peer2.org3:
-        endorsingPeer: false
-        chaincodeQuery: true
-        ledgerQuery: true
-        eventSource: false
-    
     
 
     contracts:
-      - id: electronic-health-record
+      - id: generator
         version: v1
-        language: node
-        path: /caliper-chaincode/electronic-health-record
+        language: golang
+        path: /caliper-chaincode/generator

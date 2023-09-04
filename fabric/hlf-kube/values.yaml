@@ -27,7 +27,7 @@ peer:
       shim: info
   persistence:
     enabled: false
-    size: 16Gi
+    size: 32Gi
   # if enabled, podAntiAffinity is used to spread the peer pods in the same organization among nodes
   # normally no need to disable this
   antiAffinity:
@@ -48,7 +48,7 @@ couchdb:
   password:
   persistence:
     enabled: false
-    size: 16Gi
+    size: 32Gi
 
 # Orderer settings. applies to all Orderer pods
 orderer:
@@ -59,7 +59,7 @@ orderer:
   launchPods: true
   persistence:
     enabled: false
-    size: 16Gi
+    size: 32Gi
   # when enabled, internal communication among Raft orderers are done at a different port
   # useful when you dont want to enable TLS globally (i.e for transparent load balancing)
   # has no effect if orderer type is not etcdraft

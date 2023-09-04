@@ -144,6 +144,8 @@ spec:
           value: /var/hyperledger/orderer/tls/server.crt
         - name: ORDERER_GENERAL_TLS_ROOTCAS
           value: /var/hyperledger/orderer/tls/ca.crt
+        - name: ORDERER_GENERAL_CLUSTER_SENDBUFFERSIZE
+          value: "1000"
 
         - name: ORDERER_GENERAL_CLUSTER_CLIENTPRIVATEKEY
           value: /var/hyperledger/orderer/tls/server.key

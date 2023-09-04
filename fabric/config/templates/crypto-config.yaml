@@ -14,6 +14,7 @@ OrdererOrgs:
       - Hostname: orderer0
       - Hostname: orderer1
       - Hostname: orderer2
+      - Hostname: orderer3
 
 # ---------------------------------------------------------------------------
 # "PeerOrgs" - Definition of organizations managing peer nodes
@@ -23,14 +24,9 @@ PeerOrgs:
     Domain: org1
     EnableNodeOUs: true
     Template:
-      Count:  3
+      Count:  2
   - Name: Org2
     Domain: org2
     EnableNodeOUs: true
     Template:
-      Count:  3
-  - Name: Org3
-    Domain: org3
-    EnableNodeOUs: true
-    Template:
-      Count:  3
+      Count:  2

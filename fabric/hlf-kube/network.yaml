@@ -18,7 +18,7 @@ fabric_peer_loglevel: INFO
 fabric_orderer_loglevel: INFO
 use_docker_credentials: false
 
-stateDatabase: CouchDB
+stateDatabase: goleveldb
 
 network:
   # used by init script to create genesis block and by peer-org-flow to parse consortiums
@@ -30,18 +30,18 @@ network:
   channels:
     - name: mychannel
     # all peers in these organizations will join the channel
-      orgs: [Org1,Org2,Org3,]
+      orgs: [Org1,Org2,]
 
   # defines which chaincodes will be installed to which organizations
   chaincodes:
-    - name: simplesupplychain
+    - name: generator
       language: golang
-      path: chaincode/simplesupplychain/go
+      path: chaincode/generator/go
       version: v1
       sequence: 1
-      initFunction: '{\"function\":\"initLedger\",\"Args\":[]}'
-      orgs: [Org1,Org2,Org3,]
+      initFunction: '{\"function\":\"\",\"Args\":[]}'
+      orgs: [Org1,Org2,]
       channels:
         - name: mychannel
-          orgs: [Org1,Org2,Org3,]
-          policy: OR ('Org1MSP.member','Org2MSP.member','Org3MSP.member',)
+          orgs: [Org1,Org2,]
+          policy: OR ('Org1MSP.member','Org2MSP.member',)
