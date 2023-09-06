@@ -162,6 +162,10 @@ spec:
           value: {{ $.Values.orderer.cluster.port | quote }}
         - name: ORDERER_GENERAL_CLUSTER_LISTENADDRESS
           value: 0.0.0.0
+        - name: ORDERER_CONSENSUS_SNAPDIR
+          value: /var/hyperledger/production/orderer/etcdraft/snapshot
+        - name: ORDERER_CONSENSUS_WALDIR
+          value: /var/hyperledger/production/orderer/etcdraft/wal
         {{- end }}
 
         # Operations configuration 
