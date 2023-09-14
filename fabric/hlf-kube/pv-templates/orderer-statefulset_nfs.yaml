@@ -19,11 +19,12 @@ spec:
       name: orderer-disk
     spec:
       accessModes:
-        - ReadWriteOnce
+        - ReadWriteMany
       storageClassName: {{ $.Values.persistence.storageClass }}
       resources:
         requests:
           storage: {{ $.Values.orderer.persistence.size }}
+      volumeName: orderer-disk-hlf-orderer--{{ $org.Name | lower }}--{{ $host.Hostname | lower }}-0
   {{- end }}
   template:
     metadata:
@@ -36,9 +37,15 @@ spec:
         {{- if not $.Values.orderer.persistence.enabled }}
       - name: orderer-disk
         emptyDir: {}
+        #nfs:
+        #  server: nasdis.in.tum.de
+        #  path: /srv/space-hdd_dis/home_dis-hdd/temp-chacko
         {{- end }}
       - name: rsync-disk
         emptyDir: {}
+        #nfs:
+        #  server: nasdis.in.tum.de
+        #  path: /srv/space-hdd_dis/home_dis-hdd/temp-chacko
       - name: orderer-tls
         secret:
           secretName: hlf-orderer--{{ $org.Name | lower }}--{{ $host.Hostname | lower }}-tls
@@ -116,6 +123,7 @@ spec:
         volumeMounts:
         - mountPath: /var/hyperledger/production/orderer/
           name: orderer-disk
+          subPath: hlf-orderer--{{ $org.Name | lower }}--{{ $host.Hostname | lower }}
         - mountPath: /var/hyperledger/orderer/tls/
           name: orderer-tls
         - mountPath: /var/hyperledger/orderer/msp/

@@ -218,6 +218,18 @@ func (s *SmartContract) Func6(ctx contractapi.TransactionContextInterface, args 
 
 	return nil
 }
+func (s *SmartContract) Func70(ctx contractapi.TransactionContextInterface, args []string) error {
+
+	//Update a key
+	value, _ := ctx.GetStub().GetState(args[0])
+
+	valuex := args[1]
+	jvalue, _ := json.Marshal(valuex)
+	ctx.GetStub().PutState(args[0], jvalue)
+	_ = value
+	fmt.Println(value)
+	return nil
+}
 func (s *SmartContract) Func7(ctx contractapi.TransactionContextInterface, args []string) error {
 
 	//Update a key

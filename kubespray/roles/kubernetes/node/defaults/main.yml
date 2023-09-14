@@ -23,25 +23,25 @@ kubelet_kubelet_cgroups: "/systemd/system.slice"
 kubelet_fail_swap_on: true
 
 # Reserve this space for kube resources
-kube_memory_reserved: 512Mi
-kube_cpu_reserved: 200m
+kube_memory_reserved: 1024Mi
+kube_cpu_reserved: 500m
 # Reservation for master hosts
-kube_master_memory_reserved: 1024Mi
-kube_master_cpu_reserved: 400m
+kube_master_memory_reserved: 2048Mi
+kube_master_cpu_reserved: 800m
 
 # Set to true to reserve resources for system daemons
 system_reserved: false
-system_memory_reserved: 1024Mi
-system_cpu_reserved: 1000m
+system_memory_reserved: 2048Mi
+system_cpu_reserved: 2000m
 # Reservation for master hosts
-system_master_memory_reserved: 512Mi
-system_master_cpu_reserved: 500m
+system_master_memory_reserved: 1024Mi
+system_master_cpu_reserved: 1000m
 
 kubelet_status_update_frequency: 10s
 
 # Requests for load balancer app
-loadbalancer_apiserver_memory_requests: 64M
-loadbalancer_apiserver_cpu_requests: 50m
+loadbalancer_apiserver_memory_requests: 128M
+loadbalancer_apiserver_cpu_requests: 100m
 
 loadbalancer_apiserver_keepalive_timeout: 5m
 

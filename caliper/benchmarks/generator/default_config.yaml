@@ -14,7 +14,7 @@ test:
         module: /caliper-workload/initLedger.js
 
     - label: common
-      txNumber: 5000
+      txDuration: 10
       rateControl:
           type: fixed-rate
           opts:
@@ -23,7 +23,7 @@ test:
         module: /caliper-workload/common.js
 
     - label: common
-      txNumber: 5000
+      txDuration: 10
       rateControl:
           type: fixed-rate
           opts:

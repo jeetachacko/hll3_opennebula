@@ -3,7 +3,7 @@
 caliper:
   fabric:
     gateway:
-      usegateway: false
+      usegateway: true
   logging:
     targets:
       console:

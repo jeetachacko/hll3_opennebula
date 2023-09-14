@@ -95,7 +95,7 @@ class Random {
 
 	    let genWorkload = getParameters.genWorkload();
 	    var x
-	    console.log(genWorkload)
+	    //console.log(genWorkload)
 	    //genWorkload == 0==uniform, 1==RH, 2==UH, 3==IH, 4==RRH
 	    //Function index == 1:Read, 4:Insert, 7:update, 10:delete, 13:range
 	    if (genWorkload == 0) {
@@ -128,7 +128,7 @@ class Random {
     }
     static getcontractArguments(functype){
 
-	    console.log(functype)
+	    //console.log(functype)
 	    let numberOfArgs;
 	    const constantMultiplier = 100
 	    let sizeKeySpace = 10000

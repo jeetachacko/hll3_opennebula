@@ -1,0 +1,33 @@
+{{- if .Values.peer.launchPods }}
+{{- range $i, $org := $.Values.PeerOrgs }}
+{{- range $peerIndex := until ($org.Template.Count | int) }}
+{{- $peer := (printf "peer%s" ($peerIndex | toString)) }}
+{{- $peerAddress := $.Values.useActualDomains | ternary (printf "%s.%s:7051" $peer $org.Domain) (printf "hlf-peer--%s--%s:7051" ($org.Name | lower) ($peer | lower)) }}
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nfs-pv-couchdb-peer--{{ $org.Name | lower }}--{{ $peer | lower }}-0
+spec:
+  capacity:
+    storage: 32Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  claimRef:
+      # apiVersion: v1
+      # kind: PersistentVolumeClaim
+      name: couchdb-disk-hlf-peer--{{ $org.Name | lower }}--{{ $peer | lower }}-0
+  persistentVolumeReclaimPolicy: Recycle
+  storageClassName: nfs-class
+  # mountOptions:
+  #   - hard
+  #   - nfsvers=4.1
+  nfs:
+    path: /mnt/srv.nas
+    server: nasdis.in.tum.de:/srv/space-hdd_dis/home_dis-hdd/temp-chacko
+
+---
+{{- end }} {{- /* Peers */ -}}
+{{- end }} {{- /* Orgs */ -}}
+{{- end }} {{- /* if launchPods */ -}}

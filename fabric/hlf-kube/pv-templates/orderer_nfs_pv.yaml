@@ -1,0 +1,33 @@
+{{- if .Values.orderer.launchPods }}
+{{- range $i, $org := $.Values.OrdererOrgs }}
+{{- range $i, $host := $org.Specs }}
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: orderer-disk-hlf-orderer--{{ $org.Name | lower }}--{{ $host.Hostname | lower }}-0
+spec:
+  capacity:
+    storage: 192Gi
+  #volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  #claimRef:
+      # apiVersion: v1
+      # kind: PersistentVolumeClaim
+  #    name: orderer-disk-hlf-orderer--{{ $org.Name | lower }}--{{ $host.Hostname | lower }}-0
+  #persistentVolumeReclaimPolicy: Recycle
+  storageClassName: ""
+  mountOptions:
+  #   - hard
+    - nfsvers=4.2
+  nfs:
+    server: nasdis.in.tum.de
+    path: /srv/space-hdd_dis/home_dis-hdd/temp-chacko
+    #path: /mnt/srv.nas
+    #server: nasdis.in.tum.de:/srv/space-hdd_dis/home_dis-hdd/temp-chacko
+
+---
+{{- end }} {{- /* org.Specs */ -}}
+{{- end }} {{- /* Orgs */ -}}
+{{- end }} {{- /* if launchPods */ -}}

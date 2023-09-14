@@ -7,8 +7,8 @@ metadata:
     app: caliper-worker
   name: caliper-worker
 spec:
-  parallelism: 20
-  completions: 20
+  parallelism: 10
+  completions: 10
   backoffLimit: 2
   template:
     metadata:
@@ -52,6 +52,10 @@ spec:
               value: "mqtt"
             - name: CALIPER_WORKER_COMMUNICATION_ADDRESS
               value: "mqtt://mosquitto.default.svc.cluster.local:1883"
+            - name: CALIPER_FABRIC_VERIFY_READWRITESETS
+              value: "false"
+            - name: CALIPER_FABRIC_TIMEOUT_INVOKEORQUERY
+              value: "60000"
           volumeMounts:
             - mountPath: /etc/hyperledger/fabric/org1/msp/
               name: peer-msp1

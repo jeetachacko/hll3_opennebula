@@ -2,13 +2,20 @@
 
 const { WorkloadModuleBase } = require('@hyperledger/caliper-core');
 
-var zipfian  = require("zipfian-integer")
+const rand = require('./random');
+const getParameters = require('./getParameters');
+
+
+var fs = require('fs');
+const zeroPad = (num, places) => String(num).padStart(places, '0')
+
+
+let index = 0
+let fileIndex = 0
+//let txIndex = 0
 let filearray = [];
-let contractFunction = 'Func70'
-let sizeKeySpace = 10000
-let keyDisttribution = 1
-const constantMultiplier = 100
-const keyfunc = zipfian(sizeKeySpace, sizeKeySpace*2, keyDisttribution)
+let err = 0
+
 /**
  * Workload module for the benchmark round.
  */
@@ -28,18 +35,22 @@ class CreateCarWorkload extends WorkloadModuleBase {
 
 
 	let args;
-    let contractArguments = new Array()
-    let key = keyfunc()
-    contractArguments[0] = key.toString()
-    contractArguments[1] = (key * constantMultiplier).toString()
+	let invkIdent = rand.getClient()
+        let targetOrg = rand.getEndorsers()
+	let funcnum = rand.getcontractFunction()
+	let contractFunction = 'Func' + funcnum
+	let contractArguments = rand.getcontractArguments(funcnum)
+
 	var quotedAndCommaSeparated = '[' + "\"" + contractArguments.join("\",\"") + "\"" + ']';
 
-	console.log(quotedAndCommaSeparated)
+	//console.log(targetOrg)
 
 	args = { contractId: 'generator',
                 contractVersion: 'v1',
                 contractFunction: contractFunction,
                 contractArguments: [quotedAndCommaSeparated],
+		//targetOrganizations: targetOrg,
+                //invokerIdentity: invkIdent,
                 timeout: '30' }
         
 

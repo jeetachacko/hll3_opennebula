@@ -1,7 +1,7 @@
 test:
   workers:
     type: local
-    number: 20
+    number: 10
 
   rounds:
     - label: initLedger
