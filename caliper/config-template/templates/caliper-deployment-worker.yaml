@@ -57,8 +57,8 @@ spec:
               value: "mqtt://mosquitto.default.svc.cluster.local:1883"
             - name: CALIPER_FABRIC_VERIFY_READWRITESETS
               value: "false"
-            - name: CALIPER_FABRIC_TIMEOUT_INVOKEORQUERY
-              value: "60000"
+            #- name: CALIPER_FABRIC_TIMEOUT_INVOKEORQUERY
+            #  value: "60000"
           volumeMounts:
             {{- range untilStep 1 (int (add 1 .Values.fabric_num_orgs)) 1 }}
             - mountPath: /etc/hyperledger/fabric/org{{.}}/msp/
