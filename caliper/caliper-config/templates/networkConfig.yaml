@@ -114,13 +114,6 @@ orderers:
       grpc.keepalive_time_ms: 60000
     
   
-  orderer3:
-    url: grpc://hlf-orderer--ordorg1--orderer3:7050
-    grpcOptions:
-      ssl-target-name-override: orderer3.orgorderer1
-      grpc.keepalive_time_ms: 60000
-    
-  
 
 peers:
   peer0.org1:
@@ -163,8 +156,6 @@ channels:
       - orderer1
       
       - orderer2
-      
-      - orderer3
        
     peers:
       peer0.org1:

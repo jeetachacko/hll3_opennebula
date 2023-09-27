@@ -2,6 +2,17 @@
 
 # !TODO! Update hardcoded values
 
+tps=(50 100 300)
+index=0
+
+shuffle() {
+    tps=($(shuf -e "${tps[@]}"))
+    index=0
+}
+
+size=${#tps[@]}
+
+
 cd /home/ubuntu/hll3_opennebula
 chaincode=generator
 ./scripts/network_delete.sh
@@ -11,14 +22,20 @@ sleep 10s
 ./scripts/caliper_delete.sh
 sleep 60s
 
-./scripts/configfile_gen.sh
+./scripts/configfile_gen.sh ${tps[$index]}
+index=$((index + 1))
 #failcount=0
 while true; do
+    if (( index >= size )) ; then
+        shuffle
+    fi
     ./scripts/caliper_run.sh $chaincode 
-    if [ ! -f /home/ubuntu/hll3_opennebula/tpsupdate.txt ]; then
+    if [ -f /home/ubuntu/hll3_opennebula/tpsupdate.txt ]; then
+        >/home/ubuntu/hll3_opennebula/check_caliper.txt
         rm /home/ubuntu/hll3_opennebula/tpsupdate.txt
-        ./scripts/caliper_delete.sh
-        ./scripts/configfile_gen.sh
+        ./scripts/configfile_gen.sh ${tps[$index]}
+        ./scripts/caliper_delete.sh        
+        index=$((index + 1))
         sed -i -e '7,14d' /home/ubuntu/hll3_opennebula/caliper/benchmarks/generator/config.yaml
         sleep 30s
     else
