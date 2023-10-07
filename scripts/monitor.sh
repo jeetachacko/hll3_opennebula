@@ -30,8 +30,17 @@ while true; do
             pkill -9 -f caliper-manager
             pkill -9 -f caliper-logs.txt
             sleep 420s
+        elif [ -f /home/ubuntu/hll3_opennebula/parser.txt ]; then
+            echo "Caliper Failed - Low Throughput"
+            failcount=$((failcount+1))
+            echo "${failcount} Failed - Fabric & Caliper Restart - Failure Status - diff: {$diff}, succ: {$succ}" >> /home/ubuntu/hll3_opennebula/caliper/failure_logs.txt
+            pkill -9 -f ./scripts/caliper_run.sh
+            pkill -9 -f caliper-manager
+            pkill -9 -f caliper-logs.txt
+            sleep 420s
         fi
     fi
+    
     #sed -i 1,200d /home/ubuntu/hll3_opennebula/caliper/caliper-logs.txt
     #if [ $count == 1 ]; then
     #    echo "Delete check file"

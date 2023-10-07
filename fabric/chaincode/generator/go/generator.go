@@ -224,6 +224,13 @@ func (s *SmartContract) Func70(ctx contractapi.TransactionContextInterface, args
 	value, _ := ctx.GetStub().GetState(args[0])
 
 	valuex := args[1]
+	//Load Heavy Workload, Adds 1MB to the input string
+	//s2 := string([]byte{1023999: 0})
+	//valuex = valuex + s2
+
+	//Compute Heavy, Adds 1s delay
+	//time.Sleep(2 * time.Second)
+
 	jvalue, _ := json.Marshal(valuex)
 	ctx.GetStub().PutState(args[0], jvalue)
 	_ = value
