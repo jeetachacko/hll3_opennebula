@@ -4,31 +4,31 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/hyperledger/fabric-contract-api-go/contractapi"
+	// "time"
 
+	"github.com/hyperledger/fabric-contract-api-go/contractapi"
 )
 
 type SmartContract struct {
-        contractapi.Contract
+	contractapi.Contract
 }
 
 func main() {
 
-        // Create a new Smart Contract
-        chaincode, err := contractapi.NewChaincode(new(SmartContract))
-        if err != nil {
-                fmt.Printf("Error creating new Smart Contract: %s", err)
-        }
-        if err := chaincode.Start(); err != nil {
-                fmt.Printf("Error starting chaincode: %s", err.Error())
-        }
+	// Create a new Smart Contract
+	chaincode, err := contractapi.NewChaincode(new(SmartContract))
+	if err != nil {
+		fmt.Printf("Error creating new Smart Contract: %s", err)
+	}
+	if err := chaincode.Start(); err != nil {
+		fmt.Printf("Error starting chaincode: %s", err.Error())
+	}
 
 }
 
 func (s *SmartContract) Init(ctx contractapi.TransactionContextInterface) error {
 	return nil
 }
-
 
 /*func (s *SmartContract) Invoke(ctx contractapi.TransactionContextInterface) error {
 
@@ -89,9 +89,10 @@ func (s *SmartContract) InitLedger(ctx contractapi.TransactionContextInterface, 
 	return nil
 }
 
-func (s *SmartContract) DoNothing(ctx contractapi.TransactionContextInterface)  error {
+func (s *SmartContract) DoNothing(ctx contractapi.TransactionContextInterface) error {
 	return nil
 }
+
 /*
 		for key := 1; key <= args[0]; key++ {
 			value := args[1] * 235
@@ -108,6 +109,7 @@ func (s *SmartContract) Func0(ctx contractapi.TransactionContextInterface, args 
 	ctx.GetStub().PutState(args[0], jvalue)
 	return nil
 }
+
 /*	value, _ := ctx.GetStub().GetState(args[0])
 	return nil
 }*/
@@ -224,12 +226,12 @@ func (s *SmartContract) Func70(ctx contractapi.TransactionContextInterface, args
 	value, _ := ctx.GetStub().GetState(args[0])
 
 	valuex := args[1]
-	//Load Heavy Workload, Adds 1MB to the input string
-	//s2 := string([]byte{1023999: 0})
-	//valuex = valuex + s2
+	//Load Heavy Workload, Adds 2bytes to the input string
+	// s2 := string([]byte{2047: 0})
+	// valuex = valuex + s2
 
 	//Compute Heavy, Adds 1s delay
-	//time.Sleep(2 * time.Second)
+	// time.Sleep(1 * time.Second)
 
 	jvalue, _ := json.Marshal(valuex)
 	ctx.GetStub().PutState(args[0], jvalue)
@@ -483,6 +485,7 @@ func (s *SmartContract) Func18(ctx contractapi.TransactionContextInterface, args
 
 	return nil
 }
+
 /*func main() {
 
 	// Create a new Smart Contract
