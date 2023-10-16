@@ -2,15 +2,16 @@
 
 # !TODO! Update hardcoded values
 
-tps=(500 300 1000 300 1000 500)
-index=0
+tps=500
+# tps=(500 300 1000 300 1000 500)
+# index=0
 
 # shuffle() {
 #     tps=($(shuf -e "${tps[@]}"))
 #     index=0
 # }
 
-size=${#tps[@]}
+# size=${#tps[@]}
 
 
 cd /home/ubuntu/hll3_opennebula
@@ -22,21 +23,25 @@ sleep 10s
 ./scripts/caliper_delete.sh
 sleep 60s
 
-./scripts/configfile_gen.sh ${tps[$index]}
-index=$((index + 1))
+./scripts/configfile_gen.sh ${tps}
+cp /home/ubuntu/hll3_opennebula/caliper/benchmarks/$chaincode/getValues_default.js /home/ubuntu/hll3_opennebula/caliper/benchmarks/$chaincode/getValues.js
+
+# ./scripts/configfile_gen.sh ${tps[$index]}
+# index=$((index + 1))
 #failcount=0
 while true; do
-    if (( index >= size )) ; then
-        #shuffle
-        index=0
-    fi
+    # if (( index >= size )) ; then
+    #     #shuffle
+    #     index=0
+    # fi
     ./scripts/caliper_run.sh $chaincode 
     if [ -f /home/ubuntu/hll3_opennebula/tpsupdate.txt ]; then
         >/home/ubuntu/hll3_opennebula/check_caliper.txt
         rm /home/ubuntu/hll3_opennebula/tpsupdate.txt
-        ./scripts/configfile_gen.sh ${tps[$index]}
+        ./scripts/configfile_gen.sh ${tps}
+        # ./scripts/configfile_gen.sh ${tps[$index]}
         ./scripts/caliper_delete.sh        
-        index=$((index + 1))
+        # index=$((index + 1))
         sed -i -e '7,14d' /home/ubuntu/hll3_opennebula/caliper/benchmarks/generator/config.yaml
         sleep 30s
     else

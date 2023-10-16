@@ -3,12 +3,15 @@
 const { WorkloadModuleBase } = require('@hyperledger/caliper-core');
 
 var zipfian  = require("zipfian-integer")
+var deck = require('deck');
+const getValues = require('./getValues');
+
 let filearray = [];
-let contractFunction = 'Func70'
 let sizeKeySpace = 10000
 let keyDisttribution = 1
 const constantMultiplier = 100
 const keyfunc = zipfian(sizeKeySpace, sizeKeySpace*2, keyDisttribution)
+
 /**
  * Workload module for the benchmark round.
  */
@@ -28,13 +31,27 @@ class CreateCarWorkload extends WorkloadModuleBase {
 
 
 	let args;
+    let contractFunction = 'UpdatePlayCount'
+    if (getValues.workloadType() == 0) {
+        contractFunction = deck.pick({'UpdatePlayCount': 10, 'CalculateRevenue': 1});
+    }
+    else {
+        contractFunction = deck.pick({'UpdatePlayCount': 1, 'CalculateRevenue': 10});
+    }
     let contractArguments = new Array()
     let key = keyfunc()
     contractArguments[0] = key.toString()
     contractArguments[1] = (key * constantMultiplier).toString()
+    contractArguments[2] = getValues.functionType().toString()
+    contractArguments[3] = 0
+    // TEMP: NOT REQUIRED EVER! Comment this if statement for baseline run
+    // if (this.txIndex == 0 && (this.roundIndex == 0 || this.roundIndex == 1)) {
+    //     contractArguments[3] = 1
+    // }
+
 	var quotedAndCommaSeparated = '[' + "\"" + contractArguments.join("\",\"") + "\"" + ']';
 
-	console.log(quotedAndCommaSeparated)
+	// console.log(quotedAndCommaSeparated)
 
 	args = { contractId: 'generator',
                 contractVersion: 'v1',
