@@ -1,0 +1,37 @@
+# Default values for hlf-kube.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# number of times to retry a failed leaf task
+retryCount: 4
+
+logLevel: grpc=debug:info
+
+flow:
+  channel:
+    # should we run top level channel flows in parallel?
+    parallel: false
+    # fill in this array with channel names to limit the channel flow only to these ones
+    include: []
+  join:
+    # run channel join flows in parallel?
+    parallel: true
+  update:
+    # run channel update flows in parallel?
+    parallel: true
+    # the key to change
+    key: .channel_group.groups.Orderer.values.BatchSize.value.max_message_count
+    # desired value of the key
+    value: 300
+    # the key to change
+    key1: .channel_group.groups.Orderer.values.BatchSize.value.preferred_max_bytes
+    # desired value of the key
+    pval: 2
+    # the key to change
+    key2: .channel_group.groups.Orderer.values.BatchTimeout.value.timeout
+    # desired value of the key
+    tval: 0.5s
+    # the key to change
+    key3: .channel_group.groups.Orderer.values.ConsensusType.value.metadata.options.snapshot_interval_size
+    # desired value of the key
+    sval: 32

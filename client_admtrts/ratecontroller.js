@@ -20,6 +20,8 @@
 const RateInterface = require('@hyperledger/caliper-core/lib/worker/rate-control/rateInterface.js');
 let Sleep = require('@hyperledger/caliper-core/lib/common/utils/caliper-utils').sleep;
 const getValues = require('./getValues.js');
+//const fs = require('fs');
+//var stream = fs.createWriteStream("/home/ubuntu/hll3_opennebula/caliper/blockreader-logs.txt", {flags:'a'});
 //let getValues = requireUncached('./getValues')
 /**
  * Rate controller that sends transactions at a fixed rate.
@@ -51,6 +53,7 @@ class CustomRate extends RateInterface {
         //let getValues = requireUncached('/caliper-getvalues/getValues')
         let learnedrate = getValues.workerLearnedRate();
         let tpsPerWorker = learnedrate[workerIndex]
+        //console.log("applyRateControl workerIndex:", this.workerIndex, "tpsPerWorker:", tpsPerWorker)
         this.sleepTime = (tpsPerWorker > 0) ? 1000/tpsPerWorker : 0;
     }
 
@@ -68,7 +71,15 @@ class CustomRate extends RateInterface {
         }
 
         const totalSubmitted = this.stats.getTotalSubmittedTx();
-        const diff = (this.sleepTime * totalSubmitted - (Date.now() - this.stats.getRoundStartTime()));
+        let diff = (this.sleepTime * totalSubmitted - (Date.now() - this.stats.getRoundStartTime()));
+        // if (this.workerIndex > 5) {
+        //     diff = diff + 5000;
+        //     // diff = ((diff + 10000) > 0) ? diff + 2000 : diff;
+        // }
+        // console.log("applyRateControl workerIndex:", this.workerIndex, "diff:", diff)
+        // console.log("applyRateControl workerIndex:", this.workerIndex, "getTotalSubmittedTx:", this.stats.getTotalSubmittedTx())
+        // console.log("applyRateControl workerIndex:", this.workerIndex, "getTotalSuccessfulTx:", this.stats.getTotalSuccessfulTx())
+        // console.log("applyRateControl workerIndex:", this.workerIndex, "getTotalLatencyForSuccessful:", this.stats.getTotalLatencyForSuccessful())
         await Sleep(diff);
     }
 
@@ -77,6 +88,8 @@ class CustomRate extends RateInterface {
      * @async
      */
     async end() { 
+        console.log("applyRateControl workerIndex=", this.workerIndex, "=getTotalSuccessfulTx=", this.stats.getTotalSuccessfulTx(), "=getTotalSubmittedTx=", this.stats.getTotalSubmittedTx(), "=getTotalLatencyForSuccessful=", this.stats.getTotalLatencyForSuccessful(), "=")
+        //stream.write("Worker: " + this.workerIndex + " CumulativeTxStatistics: " + this.stats.getCumulativeTxStatistics() + "\n");
         // console.log("end txIndex:", this.txIndex)
         // let getValues = requireUncached('/caliper-getvalues/getValues')
         // for (const path in require.cache) {

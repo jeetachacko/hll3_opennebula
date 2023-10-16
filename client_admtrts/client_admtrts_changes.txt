@@ -1,0 +1,59 @@
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   caliper/benchmarks/generator/common.js
+	modified:   caliper/benchmarks/generator/config.yaml
+	modified:   caliper/caliper-config/templates/networkConfig.yaml
+	modified:   caliper/config-template/templates/networkConfig.yaml
+	modified:   client_admtrts/getValues.js
+	modified:   client_admtrts/scf_run.sh
+	modified:   fabric/chaincode/generator/go/generator.go
+	modified:   fabric/channel-update/values.yaml
+	modified:   fabric/config-template/templates/fabric-config.yaml
+	modified:   fabric/config/templates/channel-artifacts/genesis.block
+	modified:   fabric/config/templates/fabric-config.yaml
+	modified:   fabric/config/templates/hostAliases.yaml
+	modified:   fabric/hlf-kube/fabric-config.yaml
+	modified:   fabric/hlf-kube/pv-templates/peer-statefulset_nfs.yaml
+	modified:   fabric/hlf-kube/templates/peer-statefulset.yaml
+	modified:   openNebula/terraform-vm/terraform/config.tfvars
+	modified:   openNebula/terraform-vm/terraform/virtual-machines.tf
+	modified:   scripts/caliper_delete.sh
+	modified:   scripts/caliper_run.sh
+	modified:   scripts/configfile_gen.sh
+	modified:   scripts/k8s_opennebula.sh
+	modified:   scripts/k8s_opennebula_kubectl.sh
+	modified:   scripts/monitor.sh
+	modified:   scripts/network_delete.sh
+	modified:   scripts/scf_kill.sh
+	modified:   scripts/scf_run.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	caliper/benchmarks/generator/common_original_simplegen.js
+	caliper/benchmarks/generator/getValues.js
+	caliper/benchmarks/generator/getValues_default.js
+	caliper/benchmarks/generator/ratecontroller.js
+	caliper/caliper-logs.txt
+	caliper/failure_logs.txt
+	caliper/readBlockchain/
+	caliper/values.yaml
+	caliper/workerlog.txt
+	client_admtrts/networkConfig.yaml
+	client_admtrts/update_client_config.sh
+	fabric/channel-read/
+	get_helm.sh
+	go1.19.linux-amd64.tar.gz
+	kubectl
+	kubectl.sha256
+	network-delay.yaml
+	openNebula/terraform-vm/ansible/inventory.cfg
+	openNebula/terraform-vm/terraform/.terraform.lock.hcl
+	openNebula/terraform-vm/terraform/.terraform/
+	openNebula/terraform-vm/terraform/terraform.tfstate
+	openNebula/terraform-vm/terraform/terraform.tfstate.backup
+	parser.txt
+	scripts/caliper_rerun.sh
+	scripts/configmap_update.sh
+	scripts/network_read.sh
+	test.sh

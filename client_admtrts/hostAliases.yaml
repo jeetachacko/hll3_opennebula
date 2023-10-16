@@ -1,0 +1,15 @@
+hostAliases:
+- ip: 10.233.16.163
+  hostnames: [orderer0.orgorderer1]
+- ip: 10.233.31.46
+  hostnames: [orderer1.orgorderer1]
+- ip: 10.233.56.110
+  hostnames: [orderer2.orgorderer1]
+- ip: 10.233.16.25
+  hostnames: [peer0.org1]
+- ip: 10.233.16.34
+  hostnames: [peer1.org1]
+- ip: 10.233.39.17
+  hostnames: [peer0.org2]
+- ip: 10.233.18.150
+  hostnames: [peer1.org2]

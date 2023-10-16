@@ -2,11 +2,11 @@
 class getValues {
 
      static workerActualRate() {
-          var wactualrate = [100, 100, 100, 100, 100, 100, 100, 100, 100, 100]
+          var wactualrate = [50, 50, 50, 50, 50, 50, 50, 50, 50, 50]
           return wactualrate;
      }
      static workerLearnedRate() {
-          var wlearnedrate = [70, 70, 70, 70, 70, 100, 100, 100, 100, 100]
+          var wlearnedrate = [50, 50, 50, 50, 50, 50, 50, 50, 50, 50]
           return wlearnedrate;
      }
      static workerMaxRate() {

@@ -12,13 +12,18 @@ sleep 10s
 sleep 60s
 
 ./scripts/configfile_gen.sh
+cp /home/ubuntu/hll3_opennebula/caliper/benchmarks/$chaincode/getValues_default.js /home/ubuntu/hll3_opennebula/caliper/benchmarks/$chaincode/getValues.js
 #failcount=0
+first=0
 while true; do
     ./scripts/caliper_run.sh $chaincode 
-    if [ ! -f /home/ubuntu/hll3_opennebula/rlupdate.txt ]; then
+    if [ -f /home/ubuntu/hll3_opennebula/rlupdate.txt ]; then
         rm /home/ubuntu/hll3_opennebula/rlupdate.txt
         ./scripts/caliper_delete.sh
-        sed -i -e '7,14d' /home/ubuntu/hll3_opennebula/caliper/benchmarks/$chaincode/config.yaml
+        if [ $first -eq 0 ]; then
+            first=1
+            sed -i -e '7,14d' /home/ubuntu/hll3_opennebula/caliper/benchmarks/$chaincode/config.yaml
+        fi
         sleep 30s
     else
         >/home/ubuntu/hll3_opennebula/check.txt
@@ -27,6 +32,7 @@ while true; do
         sleep 30s
         ./scripts/network_run.sh
         ./scripts/configfile_gen.sh
+        first=0
         sleep 30s
     fi
     #sed -i -e '7,14d' /home/ubuntu/hll3_opennebula/caliper/benchmarks/$chaincode/config.yaml
