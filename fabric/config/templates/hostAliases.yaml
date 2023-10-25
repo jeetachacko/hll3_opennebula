@@ -1,25 +1,15 @@
 hostAliases:
-- ip: 10.233.6.121
+- ip: 10.233.10.121
   hostnames: [orderer0.orgorderer1]
-- ip: 10.233.17.172
+- ip: 10.233.13.223
   hostnames: [orderer1.orgorderer1]
-- ip: 10.233.28.94
+- ip: 10.233.53.57
   hostnames: [orderer2.orgorderer1]
-- ip: 10.233.54.32
+- ip: 10.233.1.58
   hostnames: [peer0.org1]
-- ip: 10.233.40.146
+- ip: 10.233.60.175
   hostnames: [peer1.org1]
-- ip: 10.233.19.145
-  hostnames: [peer2.org1]
-- ip: 10.233.39.41
+- ip: 10.233.20.246
   hostnames: [peer0.org2]
-- ip: 10.233.48.92
+- ip: 10.233.33.234
   hostnames: [peer1.org2]
-- ip: 10.233.40.86
-  hostnames: [peer2.org2]
-- ip: 10.233.20.36
-  hostnames: [peer0.org3]
-- ip: 10.233.0.39
-  hostnames: [peer1.org3]
-- ip: 10.233.28.135
-  hostnames: [peer2.org3]

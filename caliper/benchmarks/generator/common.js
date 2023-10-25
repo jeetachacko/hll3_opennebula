@@ -1,12 +1,13 @@
 'use strict';
 
 const { WorkloadModuleBase } = require('@hyperledger/caliper-core');
+let Sleep = require('@hyperledger/caliper-core/lib/common/utils/caliper-utils').sleep;
 
 var zipfian  = require("zipfian-integer")
 let filearray = [];
 let contractFunction = 'Func70'
 let sizeKeySpace = 10000
-let keyDisttribution = 1
+let keyDisttribution = 0.5
 const constantMultiplier = 100
 const keyfunc = zipfian(sizeKeySpace, sizeKeySpace*2, keyDisttribution)
 /**
@@ -26,24 +27,46 @@ class CreateCarWorkload extends WorkloadModuleBase {
      */
     async submitTransaction() {
 
-
-	let args;
-    let contractArguments = new Array()
-    let key = keyfunc()
-    contractArguments[0] = key.toString()
-    contractArguments[1] = (key * constantMultiplier).toString()
-	var quotedAndCommaSeparated = '[' + "\"" + contractArguments.join("\",\"") + "\"" + ']';
-
-	console.log(quotedAndCommaSeparated)
-
-	args = { contractId: 'generator',
-                contractVersion: 'v1',
-                contractFunction: contractFunction,
-                contractArguments: [quotedAndCommaSeparated],
-                timeout: '30' }
+        this.txIndex++;
+        let args;
+        let contractArguments = new Array()
+        let key = keyfunc()
+        contractArguments[0] = key.toString()
+        contractArguments[1] = (key * constantMultiplier).toString()
+        contractArguments[2] = (this.workerIndex).toString()
+        var quotedAndCommaSeparated = '[' + "\"" + contractArguments.join("\",\"") + "\"" + ']';
+        let client =  'client' + '0' + '.org1' + '.example.com'
+        if (this.workerIndex < 5) {
+            client =  'client' + this.workerIndex + '.org1' + '.example.com'
+            //1 second delay for clients of org1
+            //await Sleep(2000);
+        }
+        else  {
+            client = 'client' + this.workerIndex + '.org2' + '.example.com'
+            contractFunction = 'FuncCompute'
+            //1 second delay for clients of org2
+            //await Sleep(5000);
+        }
         
+        //console.log(" Worker: ", this.workerIndex, "Client: ", client)
+        //console.log(" Worker: ", this.workerIndex, "Transaction: ", this.txIndex)
 
-	    await this.sutAdapter.sendRequests(args);
+        args = { contractId: 'generator',
+                    contractVersion: 'v1',
+                    contractFunction: contractFunction,
+                    contractArguments: [quotedAndCommaSeparated],
+                    invokerIdentity: client,
+                    timeout: '30' }
+        
+        // if (this.txIndex % 10 == 0) {
+        //     await this.sutAdapter.sendRequests(args);            
+        // } else {
+        //     console.log("Skipping  transaction: ", this.txIndex)
+        // }
+
+        await this.sutAdapter.sendRequests(args); 
+
+        
 
     }
 }

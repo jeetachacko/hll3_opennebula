@@ -21,7 +21,7 @@ sudo pip3 install -r contrib/inventory_builder/requirements.txt
 cp -rfp inventory/sample inventory/kubecluster
 
 # create variable IPS
-declare -a IPS=(172.24.33.105 172.24.33.117 172.24.33.76 172.24.33.130 172.24.33.60) #Add IPS seperated by space
+declare -a IPS=(172.24.33.131 172.24.33.132 172.24.33.133) #Add IPS seperated by space
 
 # generating inventory file
 CONFIG_FILE=inventory/kubecluster/hosts.yml python3 contrib/inventory_builder/inventory.py ${IPS[@]}

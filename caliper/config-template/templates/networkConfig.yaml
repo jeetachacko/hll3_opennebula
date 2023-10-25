@@ -14,18 +14,31 @@ info:
 
 clients:
   {{- $root := . -}}
-  {{- range untilStep 1 (int (add 1 .Values.fabric_num_orgs)) 1 }}
-  client0.org{{.}}.example.com:
+  {{- range untilStep 0 (int (add 1 4)) 1 }}
+  client{{.}}.org1.example.com:
     client:
-      organization: Org{{.}}
+      organization: Org1
       credentialStore:
-        path: /tmp/hfc-kvs/org{{.}}
+        path: /tmp/hfc-kvs/org1
         cryptoStore:
-          path: /tmp/hfc-cvs/org{{.}}
+          path: /tmp/hfc-cvs/org1
       clientPrivateKey:
-        path: /etc/hyperledger/fabric/org{{.}}/msp/keystore/key.pem
+        path: /etc/hyperledger/fabric/org1/msp/keystore/key.pem
       clientSignedCert:
-        path: /etc/hyperledger/fabric/org{{.}}/msp/signcerts/cert.pem
+        path: /etc/hyperledger/fabric/org1/msp/signcerts/cert.pem
+  {{ end }}
+  {{- range untilStep 5 (int (add 1 9)) 1 }}
+  client{{.}}.org2.example.com:
+    client:
+      organization: Org2
+      credentialStore:
+        path: /tmp/hfc-kvs/org2
+        cryptoStore:
+          path: /tmp/hfc-cvs/org2
+      clientPrivateKey:
+        path: /etc/hyperledger/fabric/org2/msp/keystore/key.pem
+      clientSignedCert:
+        path: /etc/hyperledger/fabric/org2/msp/signcerts/cert.pem
   {{ end }}
 
 organizations:

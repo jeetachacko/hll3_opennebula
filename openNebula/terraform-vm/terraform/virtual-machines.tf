@@ -19,7 +19,7 @@ provider "opennebula" {
 
 resource "opennebula_virtual_machine" "client" {
   count = var.ON_VM_COUNT
-  name        = "hyperledgerlab3_${count.index}"
+  name        = "scf_large_${count.index}"
   description = "hll3_node"
   cpu         = var.CPU_CORES
   vcpu        = var.CPU_CORES

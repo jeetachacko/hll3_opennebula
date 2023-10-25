@@ -443,9 +443,9 @@ peer:
         concurrency:
             # endorserService limits concurrent requests to endorser service that handles chaincode deployment, query and invocation,
             # including both user chaincodes and system chaincodes.
-            endorserService: 2500
+            endorserService: 5000
             # deliverService limits concurrent event listeners registered to deliver service for blocks and transaction events.
-            deliverService: 2500
+            deliverService: 5000
             # gatewayService limits concurrent requests to gateway service that handles the submission and evaluation of transactions.
             gatewayService: 1000
 

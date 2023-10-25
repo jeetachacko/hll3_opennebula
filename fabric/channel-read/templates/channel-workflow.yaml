@@ -1,0 +1,205 @@
+{{- $vars:= dict}}
+{{- $ordererOrg := index .Values.OrdererOrgs 0 }}
+{{- $ordererAddress := $.Values.useActualDomains | ternary (printf "%s.%s" (index $ordererOrg.Specs 0).Hostname $ordererOrg.Domain) (printf "hlf-orderer--%s--%s" ($ordererOrg.Name | lower) ((index $ordererOrg.Specs 0).Hostname | lower)) }} 
+{{- $_ := set $vars "ordererOrgName" $ordererOrg.Name }}
+{{- $_ := set $vars "ordererUrl" (printf "%s:7050" $ordererAddress ) }}
+{{- $_ := set $vars "ordererHost" (index $ordererOrg.Specs 0).Hostname }}
+{{- $_ := set $vars "ordererTlsSecret"  (printf "hlf-orderer--%s-tlsca" ($ordererOrg.Name | lower)) }}
+
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: hlf-channels-
+spec:
+  ttlStrategy:
+    secondsAfterCompletion: 10 # Time to live after workflow is completed, replaces ttlSecondsAfterFinished
+    secondsAfterSuccess: 5     # Time to live after workflow is successful
+    secondsAfterFailure: 5     # Time to live after workflow fails
+  entrypoint: channels
+  podGC:
+    strategy: OnPodSuccess
+  
+  {{- if .Values.use_docker_credentials }}
+  imagePullSecrets:
+  - name: regcred
+  {{- end }}
+
+  # additional entries going into /etc/hosts file
+  {{- if $.Values.hostAliases }}
+  hostAliases:
+  {{- range $i, $alias := $.Values.hostAliases }}
+  - ip: {{ $alias.ip }}
+    hostnames: {{ $alias.hostnames }}
+  {{- end }}
+  {{- end }}{{""}}
+  
+  volumes:
+  - name: hlf-scripts
+    configMap:
+      name: hlf-scripts
+      defaultMode: 0777 # make scripts executable
+  - name: hlf-configtx
+    secret:
+      secretName: hlf-configtx.yaml
+  - name: orderer-tlsca
+    secret:
+      secretName: {{ $vars.ordererTlsSecret }}
+
+{{- range $i, $org := .Values.PeerOrgs }}
+{{- if eq $org.Name "Org1"}}
+  - name: peer-{{ $org.Name | lower }}-admin-msp
+    secret:
+      secretName: hlf-peer--{{ $org.Name | lower }}--admin-msp
+      items:
+      - key: config.yaml
+        path: config.yaml
+      - key: cert.pem
+        path: signcerts/cert.pem
+      - key: key.pem
+        path: keystore/key.pem
+      - key: cacert.pem
+        path: cacerts/ca.{{ $org.Domain }}-cert.pem
+      - key: tlscacert.pem
+        path: tlscacerts/cert.pem
+
+  - name: peer-{{ $org.Name | lower }}-msp
+    secret:
+      secretName: hlf-peer--{{ $org.Name | lower }}--msp
+      items:
+      - key: cacert.pem
+        path: cacerts/ca.{{ $org.Domain}}-cert.pem
+
+{{- range $peerIndex := until ($org.Template.Count | int) }}
+{{- $peer := (printf "peer%s" ($peerIndex | toString)) }}
+{{- if eq $peer "peer0"}}
+
+  - name: peer-{{ $org.Name | lower }}-{{ $peer | lower }}-tls
+    secret:
+      secretName: hlf-peer--{{ $org.Name | lower }}--{{ $peer | lower }}-tls
+{{ end }} {{- /* if Peers */ -}}
+{{ end }} {{- /* if PeersOrgs */ -}}
+{{ end }} {{- /* Peers */ -}}
+{{ end }} {{- /* PeerOrgs */ -}}{{""}}
+
+  templates:
+  - name: channels
+    steps:
+# top level: channels
+{{- $_ := set $vars "firstStep" true }}
+{{- range $i, $channel := .Values.network.channels }}
+{{- if or (not $.Values.flow.channel.include) (has $channel.name $.Values.flow.channel.include) }}
+{{- if or $vars.firstStep (not $.Values.flow.channel.parallel) }}
+    - 
+{{- end }}
+      - name: channel--{{ $channel.name }}
+        template: channel--{{ $channel.name }}
+      
+{{- $_ := set $vars "firstStep" false }}
+{{- end }} {{- /* if channel included */ -}}
+{{- end }} {{- /* channels */ -}}{{""}}
+
+# second level: channel templates
+{{- range $i, $channel := .Values.network.channels }}
+{{- if or (not $.Values.flow.channel.include) (has $channel.name $.Values.flow.channel.include) }}
+  - name: channel--{{ $channel.name }}
+    steps:
+    - - name: update-channel--{{ $channel.name }}
+        template: update-channel--{{ $channel.name }}
+{{- end }} {{- /* if channel included */ -}}
+{{- end }} {{- /* channels */ -}}{{""}}
+
+# third level: channel update templates
+{{ range $i, $channel := .Values.network.channels }}
+{{- if or (not $.Values.flow.channel.include) (has $channel.name $.Values.flow.channel.include) }}
+{{- $_ := set $vars "firstStep" true }}
+  - name: update-channel--{{ $channel.name }}
+    steps:
+{{- range $orgName := $channel.orgs }}
+{{- range $i, $org := $.Values.PeerOrgs }}
+
+
+{{- if eq $orgName $org.Name }}
+{{- if eq $org.Name "Org1"}}
+
+{{- if or $vars.firstStep (not $.Values.flow.update.parallel) }}
+    - 
+{{- end }}
+      - name: maybe-read-channel--{{ $channel.name }}--{{ $org.Name }}
+        template: maybe-read-channel--{{ $channel.name }}--{{ $org.Name }}
+
+{{- $_ := set $vars "firstStep" false }}
+
+{{- end }} {{- /* if org */ -}} 
+{{- end}} {{- /* if orgName */ -}} 
+{{- end }} {{- /* peer.Orgs */ -}}
+{{- end }} {{- /* channel.orgs */ -}}
+{{- end }} {{- /* if channel included */ -}}
+{{- end }} {{- /* channels */ -}} {{""}}
+
+# leaf update templates
+{{- range $i, $channel := .Values.network.channels }}
+{{- if or (not $.Values.flow.channel.include) (has $channel.name $.Values.flow.channel.include) }}
+{{- range $orgName := $channel.orgs }}
+{{- range $i, $org := $.Values.PeerOrgs }}
+
+{{- if eq $orgName $org.Name }}
+{{- if eq $org.Name "Org1"}}
+
+  - name: maybe-read-channel--{{ $channel.name }}--{{ $org.Name }}
+    inputs:
+    retryStrategy:
+      limit: {{ $.Values.retryCount }}
+    script:
+      image: {{ $.Values.fabric_images.tools }}
+      command: [sh]
+      source: |
+          set -x
+          mkdir -p /work && 
+          peer channel getinfo -c {{ $channel.name }} -o {{ $vars.ordererUrl }} \
+              {{- if $.Values.tlsEnabled }}
+                  --tls --cafile /hlf_config/orderer-tlsca/tlscacert.pem \
+              {{- end }}
+          peer channel fetch <newest|oldest|config|(number)> [outputfile]
+          peer channel fetch config /work/config_block.pb -c {{ $channel.name }} -o {{ $vars.ordererUrl }} \
+              {{- if $.Values.tlsEnabled }}
+                  --tls --cafile /hlf_config/orderer-tlsca/tlscacert.pem \
+              {{- end }}
+          &&  echo '-- fetched config block' && 
+          
+          [ ! -f "/usr/bin/yq" ] && (wget https://github.com/mikefarah/yq/releases/download/v4.2.0/yq_linux_amd64.tar.gz -O - | tar xz && mv yq_linux_amd64 /usr/bin/yq)
+
+          configtxlator proto_decode --input /work/config_block.pb --type common.Block | jq .data.data[0].payload.data.config > /work/config.json && 
+          echo '-- trimmed envelope from config block and converted to json' && 
+          set +x
+
+      volumeMounts:
+        - mountPath: /hlf_config/orderer-tlsca
+          name: orderer-tlsca
+        - mountPath: /etc/hyperledger/fabric/msp/
+          name: peer-{{ $org.Name | lower }}-admin-msp
+        - mountPath: /hlf-scripts
+          name: hlf-scripts
+        - mountPath: /hlf_config/
+          name: hlf-configtx
+      
+      env:
+        - name: FABRIC_LOGGING_SPEC
+          value: {{ $.Values.logLevel }}
+        - name: CORE_PEER_LOCALMSPID
+          value: {{ $org.Name }}MSP
+        - name: CORE_PEER_MSPCONFIGPATH 
+          value: /etc/hyperledger/fabric/msp/
+        - name: CORE_PEER_TLS_CERT_FILE
+          value: /etc/hyperledger/fabric/tls/server.crt
+        - name: CORE_PEER_TLS_KEY_FILE
+          value: /etc/hyperledger/fabric/tls/server.key
+        - name: CORE_PEER_TLS_ROOTCERT_FILE
+          value: /etc/hyperledger/fabric/tls/ca.crt
+
+{{- end }} {{- /* if org Name */ -}} 
+{{- end }} {{- /* if org */ -}} 
+{{- end }} {{- /* peerOrgs */ -}}
+{{- end }} {{- /* channel.orgs */ -}}
+{{- end }} {{- /* if channel included */ -}}
+{{- end }} {{- /* channels */ -}}{{""}}
+---

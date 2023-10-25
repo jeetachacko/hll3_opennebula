@@ -2,7 +2,7 @@
 mkdir -p ~/.kube
 
 # copy the kubeconfig file
-scp ubuntu@172.24.33.105:/etc/kubernetes/admin.conf ~/.kube/config
+scp ubuntu@172.24.33.131:/etc/kubernetes/admin.conf ~/.kube/config
 # change the above IP to point to the control plane node, from where the admin.conf is to be copied
 
 # change ownership

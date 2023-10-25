@@ -17,21 +17,25 @@ fi
 
 set -x
 
-helm template config-template/ -f ./benchmarks/$CHAINCODE_NAME/config.yaml -f ../fabric/network-configuration.yaml --output-dir .
+# helm template config-template/ -f ./benchmarks/$CHAINCODE_NAME/config.yaml -f ../fabric/network-configuration.yaml --output-dir .
 
-kubectl apply -f mosquitto/
+# kubectl apply -f mosquitto/
 
-kubectl create configmap benchmarks --from-file=./benchmarks/$CHAINCODE_NAME/config.yaml
+# kubectl create configmap benchmarks --from-file=./benchmarks/$CHAINCODE_NAME/config.yaml
 
-kubectl create configmap workload --from-file=./benchmarks/$CHAINCODE_NAME
+# kubectl create configmap workload --from-file=./benchmarks/$CHAINCODE_NAME
 
-#kubectl create configmap getvalues --from-file=./benchmarks/$CHAINCODE_NAME/getValues.js --save-config=true
+# #kubectl create configmap getvalues --from-file=./benchmarks/$CHAINCODE_NAME/getValues.js --save-config=true
 
-kubectl create configmap network --from-file=./caliper-config/templates/networkConfig.yaml
+# kubectl create configmap network --from-file=./caliper-config/templates/networkConfig.yaml
 
-kubectl create configmap caliper-config --from-file=./caliper-config/templates/caliper.yaml
+# kubectl create configmap caliper-config --from-file=./caliper-config/templates/caliper.yaml
 
-kubectl create configmap caliper-report-git --from-file=./git.yaml
+# kubectl create configmap caliper-report-git --from-file=./git.yaml
+
+kubectl delete -f caliper-config/templates/caliper-deployment.yaml 
+
+kubectl delete -f caliper-config/templates/caliper-deployment-worker.yaml 
 
 kubectl apply -f caliper-config/templates/caliper-deployment.yaml 
 
@@ -44,4 +48,3 @@ sleep 5
 while [[  $(kubectl get pods -l app=caliper-manager -o 'jsonpath={..status.conditions[?(@.type=="Ready")].status}') == *"False"* ]] || [[ -z $(kubectl get  pods -l app=caliper-manager) ]] ; do echo "waiting for the caliper manager pod to run..." && sleep 5; done
 kubectl logs -l app=caliper-manager -f >> caliper-logs.txt
 #kubectl logs -l app=caliper-manager -f 2>&1 | tee -a caliper-logs.txt
-

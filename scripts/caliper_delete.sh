@@ -7,6 +7,7 @@ kubectl delete configmap network
 kubectl delete configmap workload
 kubectl delete configmap caliper-config  
 kubectl delete configmap caliper-report-git
+#kubectl delete configmap getvalues
 
 kubectl delete deployment mosquitto
 kubectl delete svc mosquitto
