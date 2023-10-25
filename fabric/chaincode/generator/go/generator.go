@@ -3,32 +3,34 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-
-	// "time"
+	// "strconv"
 
 	"github.com/hyperledger/fabric-contract-api-go/contractapi"
+	"time"
+
 )
 
 type SmartContract struct {
-	contractapi.Contract
+        contractapi.Contract
 }
 
 func main() {
 
-	// Create a new Smart Contract
-	chaincode, err := contractapi.NewChaincode(new(SmartContract))
-	if err != nil {
-		fmt.Printf("Error creating new Smart Contract: %s", err)
-	}
-	if err := chaincode.Start(); err != nil {
-		fmt.Printf("Error starting chaincode: %s", err.Error())
-	}
+        // Create a new Smart Contract
+        chaincode, err := contractapi.NewChaincode(new(SmartContract))
+        if err != nil {
+                fmt.Printf("Error creating new Smart Contract: %s", err)
+        }
+        if err := chaincode.Start(); err != nil {
+                fmt.Printf("Error starting chaincode: %s", err.Error())
+        }
 
 }
 
 func (s *SmartContract) Init(ctx contractapi.TransactionContextInterface) error {
 	return nil
 }
+
 
 /*func (s *SmartContract) Invoke(ctx contractapi.TransactionContextInterface) error {
 
@@ -89,10 +91,9 @@ func (s *SmartContract) InitLedger(ctx contractapi.TransactionContextInterface, 
 	return nil
 }
 
-func (s *SmartContract) DoNothing(ctx contractapi.TransactionContextInterface) error {
+func (s *SmartContract) DoNothing(ctx contractapi.TransactionContextInterface)  error {
 	return nil
 }
-
 /*
 		for key := 1; key <= args[0]; key++ {
 			value := args[1] * 235
@@ -109,7 +110,6 @@ func (s *SmartContract) Func0(ctx contractapi.TransactionContextInterface, args 
 	ctx.GetStub().PutState(args[0], jvalue)
 	return nil
 }
-
 /*	value, _ := ctx.GetStub().GetState(args[0])
 	return nil
 }*/
@@ -222,6 +222,24 @@ func (s *SmartContract) Func6(ctx contractapi.TransactionContextInterface, args 
 }
 func (s *SmartContract) Func70(ctx contractapi.TransactionContextInterface, args []string) error {
 
+	// worker, _ := strconv.Atoi(args[2])
+	// if worker > 5 {
+	// 	time.Sleep(20 * time.Second)
+	// }
+
+	//Update a key
+	value, _ := ctx.GetStub().GetState(args[0])
+
+	valuex := args[1]
+	jvalue, _ := json.Marshal(valuex)
+	ctx.GetStub().PutState(args[0], jvalue)
+	_ = value
+	fmt.Println(value)
+	return nil
+}
+
+func (s *SmartContract) FuncCompute(ctx contractapi.TransactionContextInterface, args []string) error {
+
 	//Update a key
 	value, _ := ctx.GetStub().GetState(args[0])
 
@@ -231,7 +249,7 @@ func (s *SmartContract) Func70(ctx contractapi.TransactionContextInterface, args
 	// valuex = valuex + s2
 
 	//Compute Heavy, Adds 1s delay
-	// time.Sleep(1 * time.Second)
+	time.Sleep(1 * time.Second)
 
 	jvalue, _ := json.Marshal(valuex)
 	ctx.GetStub().PutState(args[0], jvalue)
@@ -239,6 +257,8 @@ func (s *SmartContract) Func70(ctx contractapi.TransactionContextInterface, args
 	fmt.Println(value)
 	return nil
 }
+
+
 func (s *SmartContract) Func7(ctx contractapi.TransactionContextInterface, args []string) error {
 
 	//Update a key
@@ -485,7 +505,6 @@ func (s *SmartContract) Func18(ctx contractapi.TransactionContextInterface, args
 
 	return nil
 }
-
 /*func main() {
 
 	// Create a new Smart Contract

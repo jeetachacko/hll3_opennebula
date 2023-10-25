@@ -1,37 +1,54 @@
-# Default values for hlf-kube.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
+#ActualRate: Rate needed by the client
+#LearnedRate: Rate recommended by the RL system (always < ActualRate), 
+#PendingRate: ActualRate-LearnedRate
+#MaxRate: Maximum rate supported by the client
 
-# number of times to retry a failed leaf task
-retryCount: 4
+w0ActualRate: 100
+w0LearnedRate: 60
+w0PendingRate: 40
+w0MaxRate: 500
 
-logLevel: grpc=debug:info
+w1ActualRate: 100
+w1LearnedRate: 60
+w1PendingRate: 40
+w1MaxRate: 500
 
-flow:
-  channel:
-    # should we run top level channel flows in parallel?
-    parallel: false
-    # fill in this array with channel names to limit the channel flow only to these ones
-    include: []
-  join:
-    # run channel join flows in parallel?
-    parallel: true
-  update:
-    # run channel update flows in parallel?
-    parallel: true
-    # the key to change
-    key: .channel_group.groups.Orderer.values.BatchSize.value.max_message_count
-    # desired value of the key
-    value: 300
-    # the key to change
-    key1: .channel_group.groups.Orderer.values.BatchSize.value.preferred_max_bytes
-    # desired value of the key
-    pval: 16
-    # the key to change
-    key2: .channel_group.groups.Orderer.values.BatchTimeout.value.timeout
-    # desired value of the key
-    tval: 0.5s
-    # the key to change
-    key3: .channel_group.groups.Orderer.values.ConsensusType.value.metadata.options.snapshot_interval_size
-    # desired value of the key
-    sval: 64
+w2ActualRate: 100
+w2LearnedRate: 60
+w2PendingRate: 40
+w2MaxRate: 500
+
+w3ActualRate: 100
+w3LearnedRate: 60
+w3PendingRate: 40
+w3MaxRate: 500
+
+w4ActualRate: 100
+w4LearnedRate: 60
+w4PendingRate: 40
+w4MaxRate: 500
+
+w5ActualRate: 100
+w5LearnedRate: 60
+w5PendingRate: 40
+w5MaxRate: 500
+
+w6ActualRate: 100
+w6LearnedRate: 60
+w6PendingRate: 40
+w6MaxRate: 500
+
+w7ActualRate: 100
+w7LearnedRate: 60
+w7PendingRate: 40
+w7MaxRate: 500
+
+w8ActualRate: 100
+w8LearnedRate: 60
+w8PendingRate: 40
+w8MaxRate: 500
+
+w9ActualRate: 100
+w9LearnedRate: 60
+w9PendingRate: 40
+w9MaxRate: 500

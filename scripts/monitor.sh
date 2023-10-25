@@ -22,7 +22,7 @@ while true; do
     succ=$(printf "%i" $(grep '| common |' /home/ubuntu/hll3_opennebula/caliper/caliper-logs.txt | awk '{print $4}' | tail -n 1))
     echo "Caliper Failure Status - diff: {$diff}, succ: {$succ}"
     if [ $diff == 0 ] || [ $succ == 0 ]; then
-        if [ ! -f /home/ubuntu/hll3_opennebula/check.txt ] && [ ! -f /home/ubuntu/hll3_opennebula/check_caliper.txt ]; then
+        if [ ! -f /home/ubuntu/hll3_opennebula/check.txt ] && [ ! -f /home/ubuntu/hll3_opennebula/rlupdate.txt ]; then
             echo "Caliper Failed"
             failcount=$((failcount+1))
             echo "${failcount} Failed - Fabric & Caliper Restart - Failure Status - diff: {$diff}, succ: {$succ}" >> /home/ubuntu/hll3_opennebula/caliper/failure_logs.txt
@@ -40,7 +40,6 @@ while true; do
             sleep 420s
         fi
     fi
-    
     #sed -i 1,200d /home/ubuntu/hll3_opennebula/caliper/caliper-logs.txt
     #if [ $count == 1 ]; then
     #    echo "Delete check file"

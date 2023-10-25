@@ -6,7 +6,7 @@ class getValues {
           return wactualrate;
      }
      static workerLearnedRate() {
-          var wlearnedrate = [100, 100, 100, 100, 100, 100, 100, 100, 100, 100]
+          var wlearnedrate = [70, 70, 70, 70, 70, 100, 100, 100, 100, 100]
           return wlearnedrate;
      }
      static workerMaxRate() {

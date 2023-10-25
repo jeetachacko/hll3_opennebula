@@ -4,20 +4,12 @@ test:
     number: 10
 
   rounds:
-    - label: initLedger
-      txNumber: 10000
-      rateControl:
-          type: fixed-rate
-          opts:
-            tps: 300
-      workload:
-        module: /caliper-workload/initLedger.js
 
 
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -26,7 +18,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -35,7 +27,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -44,7 +36,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -53,7 +45,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -62,7 +54,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -71,7 +63,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -80,7 +72,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -89,7 +81,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -98,7 +90,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -107,7 +99,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -116,7 +108,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -125,7 +117,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -134,7 +126,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -143,7 +135,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -152,7 +144,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -161,7 +153,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -170,7 +162,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -179,7 +171,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -188,7 +180,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -197,7 +189,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -206,7 +198,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -215,7 +207,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -224,7 +216,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -233,7 +225,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -242,7 +234,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -251,7 +243,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -260,7 +252,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -269,7 +261,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -278,7 +270,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -287,7 +279,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -296,7 +288,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -305,7 +297,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -314,7 +306,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -323,7 +315,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -332,7 +324,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -341,7 +333,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -350,7 +342,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -359,7 +351,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -368,7 +360,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -377,7 +369,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -386,7 +378,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -395,7 +387,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -404,7 +396,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -413,7 +405,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -422,7 +414,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -431,7 +423,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -440,7 +432,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -449,7 +441,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -458,7 +450,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -467,7 +459,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -476,7 +468,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -485,7 +477,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -494,7 +486,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -503,7 +495,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -512,7 +504,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -521,7 +513,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -530,7 +522,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -539,7 +531,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -548,7 +540,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -557,7 +549,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -566,7 +558,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -575,7 +567,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -584,7 +576,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -593,7 +585,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -602,7 +594,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -611,7 +603,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -620,7 +612,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -629,7 +621,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -638,7 +630,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -647,7 +639,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -656,7 +648,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -665,7 +657,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -674,7 +666,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -683,7 +675,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -692,7 +684,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -701,7 +693,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -710,7 +702,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -719,7 +711,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -728,7 +720,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -737,7 +729,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -746,7 +738,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -755,7 +747,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -764,7 +756,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -773,7 +765,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -782,7 +774,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -791,7 +783,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -800,7 +792,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -809,7 +801,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -818,7 +810,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -827,7 +819,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -836,7 +828,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -845,7 +837,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -854,7 +846,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -863,7 +855,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -872,7 +864,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -881,7 +873,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -890,7 +882,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -899,7 +891,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -908,7 +900,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -917,7 +909,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -926,7 +918,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -935,7 +927,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -944,7 +936,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -953,7 +945,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -962,7 +954,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -971,7 +963,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -980,7 +972,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -989,7 +981,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -998,7 +990,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1007,7 +999,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1016,7 +1008,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1025,7 +1017,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1034,7 +1026,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1043,7 +1035,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1052,7 +1044,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1061,7 +1053,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1070,7 +1062,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1079,7 +1071,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1088,7 +1080,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1097,7 +1089,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1106,7 +1098,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1115,7 +1107,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1124,7 +1116,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1133,7 +1125,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1142,7 +1134,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1151,7 +1143,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1160,7 +1152,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1169,7 +1161,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1178,7 +1170,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1187,7 +1179,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1196,7 +1188,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1205,7 +1197,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1214,7 +1206,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1223,7 +1215,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1232,7 +1224,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1241,7 +1233,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1250,7 +1242,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1259,7 +1251,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1268,7 +1260,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1277,7 +1269,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1286,7 +1278,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1295,7 +1287,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1304,7 +1296,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1313,7 +1305,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1322,7 +1314,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1331,7 +1323,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1340,7 +1332,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1349,7 +1341,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1358,7 +1350,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1367,7 +1359,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1376,7 +1368,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1385,7 +1377,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1394,7 +1386,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1403,7 +1395,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1412,7 +1404,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1421,7 +1413,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1430,7 +1422,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1439,7 +1431,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1448,7 +1440,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1457,7 +1449,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1466,7 +1458,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1475,7 +1467,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1484,7 +1476,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1493,7 +1485,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1502,7 +1494,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1511,7 +1503,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1520,7 +1512,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1529,7 +1521,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1538,7 +1530,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1547,7 +1539,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1556,7 +1548,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1565,7 +1557,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1574,7 +1566,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1583,7 +1575,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1592,7 +1584,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1601,7 +1593,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1610,7 +1602,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1619,7 +1611,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1628,7 +1620,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1637,7 +1629,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1646,7 +1638,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1655,7 +1647,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1664,7 +1656,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1673,7 +1665,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1682,7 +1674,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1691,7 +1683,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1700,7 +1692,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1709,7 +1701,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1718,7 +1710,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1727,7 +1719,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1736,7 +1728,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1745,7 +1737,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1754,7 +1746,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1763,7 +1755,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1772,7 +1764,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1781,7 +1773,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1790,7 +1782,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1799,7 +1791,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1808,7 +1800,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1817,7 +1809,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1826,7 +1818,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1835,7 +1827,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1844,7 +1836,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1853,7 +1845,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1862,7 +1854,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1871,7 +1863,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1880,7 +1872,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1889,7 +1881,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1898,7 +1890,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1907,7 +1899,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1916,7 +1908,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1925,7 +1917,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1934,7 +1926,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1943,7 +1935,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1952,7 +1944,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1961,7 +1953,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1970,7 +1962,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1979,7 +1971,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1988,7 +1980,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -1997,7 +1989,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2006,7 +1998,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2015,7 +2007,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2024,7 +2016,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2033,7 +2025,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2042,7 +2034,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2051,7 +2043,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2060,7 +2052,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2069,7 +2061,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2078,7 +2070,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2087,7 +2079,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2096,7 +2088,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2105,7 +2097,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2114,7 +2106,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2123,7 +2115,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2132,7 +2124,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2141,7 +2133,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2150,7 +2142,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2159,7 +2151,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2168,7 +2160,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2177,7 +2169,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2186,7 +2178,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2195,7 +2187,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2204,7 +2196,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2213,7 +2205,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2222,7 +2214,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2231,7 +2223,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2240,7 +2232,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2249,7 +2241,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2258,7 +2250,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2267,7 +2259,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2276,7 +2268,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2285,7 +2277,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2294,7 +2286,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2303,7 +2295,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2312,7 +2304,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2321,7 +2313,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2330,7 +2322,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2339,7 +2331,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2348,7 +2340,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2357,7 +2349,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2366,7 +2358,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2375,7 +2367,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2384,7 +2376,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2393,7 +2385,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2402,7 +2394,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2411,7 +2403,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2420,7 +2412,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2429,7 +2421,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2438,7 +2430,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2447,7 +2439,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2456,7 +2448,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2465,7 +2457,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2474,7 +2466,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2483,7 +2475,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2492,7 +2484,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2501,7 +2493,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2510,7 +2502,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2519,7 +2511,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2528,7 +2520,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2537,7 +2529,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2546,7 +2538,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2555,7 +2547,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2564,7 +2556,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2573,7 +2565,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2582,7 +2574,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2591,7 +2583,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2600,7 +2592,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2609,7 +2601,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2618,7 +2610,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2627,7 +2619,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2636,7 +2628,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2645,7 +2637,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2654,7 +2646,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2663,7 +2655,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2672,7 +2664,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2681,7 +2673,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2690,7 +2682,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2699,7 +2691,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2708,7 +2700,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2717,7 +2709,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2726,7 +2718,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2735,7 +2727,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2744,7 +2736,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2753,7 +2745,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2762,7 +2754,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2771,7 +2763,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2780,7 +2772,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2789,7 +2781,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2798,7 +2790,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2807,7 +2799,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2816,7 +2808,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2825,7 +2817,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2834,7 +2826,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2843,7 +2835,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2852,7 +2844,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2861,7 +2853,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2870,7 +2862,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2879,7 +2871,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2888,7 +2880,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2897,7 +2889,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2906,7 +2898,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2915,7 +2907,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2924,7 +2916,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2933,7 +2925,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2942,7 +2934,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2951,7 +2943,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2960,7 +2952,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2969,7 +2961,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2978,7 +2970,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2987,7 +2979,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -2996,7 +2988,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3005,7 +2997,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3014,7 +3006,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3023,7 +3015,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3032,7 +3024,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3041,7 +3033,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3050,7 +3042,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3059,7 +3051,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3068,7 +3060,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3077,7 +3069,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3086,7 +3078,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3095,7 +3087,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3104,7 +3096,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3113,7 +3105,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3122,7 +3114,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3131,7 +3123,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3140,7 +3132,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3149,7 +3141,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3158,7 +3150,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3167,7 +3159,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3176,7 +3168,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3185,7 +3177,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3194,7 +3186,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3203,7 +3195,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3212,7 +3204,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3221,7 +3213,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3230,7 +3222,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3239,7 +3231,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
@@ -3248,7 +3240,7 @@ test:
     - label: common
       txDuration: 10
       rateControl:
-          type: fixed-rate
+          type: /caliper-workload/ratecontroller.js
           opts:
             tps: 1000
       workload:
