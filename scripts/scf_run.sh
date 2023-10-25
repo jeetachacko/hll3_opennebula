@@ -2,13 +2,13 @@
 
 # !TODO! Update hardcoded values
 
-tps=(50 100 300)
+tps=(500 300 1000 300 1000 500)
 index=0
 
-shuffle() {
-    tps=($(shuf -e "${tps[@]}"))
-    index=0
-}
+# shuffle() {
+#     tps=($(shuf -e "${tps[@]}"))
+#     index=0
+# }
 
 size=${#tps[@]}
 
@@ -27,7 +27,8 @@ index=$((index + 1))
 #failcount=0
 while true; do
     if (( index >= size )) ; then
-        shuffle
+        #shuffle
+        index=0
     fi
     ./scripts/caliper_run.sh $chaincode 
     if [ -f /home/ubuntu/hll3_opennebula/tpsupdate.txt ]; then

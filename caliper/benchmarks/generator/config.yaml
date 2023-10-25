@@ -1,15 +1,25 @@
 test:
   workers:
     type: local
-    number: 3
+    number: 10
 
   rounds:
+    - label: initLedger
+      txNumber: 10000
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 300
+      workload:
+        module: /caliper-workload/initLedger.js
+
+
     - label: common
       txDuration: 10
       rateControl:
           type: fixed-rate
           opts:
-            tps: 50
+            tps: 1000
       workload:
         module: /caliper-workload/common.js
 
@@ -18,7 +28,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 50
+            tps: 1000
       workload:
         module: /caliper-workload/common.js
 
@@ -27,7 +37,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 50
+            tps: 1000
       workload:
         module: /caliper-workload/common.js
 
@@ -36,7 +46,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 50
+            tps: 1000
       workload:
         module: /caliper-workload/common.js
 
@@ -45,7 +55,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 50
+            tps: 1000
       workload:
         module: /caliper-workload/common.js
 
@@ -54,11 +64,3192 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 50
+            tps: 1000
       workload:
         module: /caliper-workload/common.js
 
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
 
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
 
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
 
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
 
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
+
+    - label: common
+      txDuration: 10
+      rateControl:
+          type: fixed-rate
+          opts:
+            tps: 1000
+      workload:
+        module: /caliper-workload/common.js
