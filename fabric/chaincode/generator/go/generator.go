@@ -248,8 +248,8 @@ func (s *SmartContract) FuncCompute(ctx contractapi.TransactionContextInterface,
 	// s2 := string([]byte{2047: 0})
 	// valuex = valuex + s2
 
-	//Compute Heavy, Adds 1s delay
-	time.Sleep(1 * time.Second)
+	//Compute Heavy, Adds 100ms delay
+	time.Sleep(500 * time.Millisecond)
 
 	jvalue, _ := json.Marshal(valuex)
 	ctx.GetStub().PutState(args[0], jvalue)

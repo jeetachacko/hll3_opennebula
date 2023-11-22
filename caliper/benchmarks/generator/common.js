@@ -7,9 +7,9 @@ var zipfian  = require("zipfian-integer")
 let filearray = [];
 let contractFunction = 'Func70'
 let sizeKeySpace = 10000
-let keyDisttribution = 0.5
+let keyDisttribution = 0
 const constantMultiplier = 100
-const keyfunc = zipfian(sizeKeySpace, sizeKeySpace*2, keyDisttribution)
+//const keyfunc = zipfian(sizeKeySpace, sizeKeySpace*2, keyDisttribution)
 /**
  * Workload module for the benchmark round.
  */
@@ -30,6 +30,33 @@ class CreateCarWorkload extends WorkloadModuleBase {
         this.txIndex++;
         let args;
         let contractArguments = new Array()
+        let keyfunc;
+        switch(this.workerIndex) {
+            case 0:
+            case 5:
+                keyfunc = zipfian(10000, 10300, keyDisttribution)
+                break;
+            case 1:
+            case 6:
+                keyfunc = zipfian(12001, 12300, keyDisttribution)
+                break;
+            case 2:
+            case 7:
+                keyfunc = zipfian(14001, 14300, keyDisttribution)
+                break;
+            case 3:
+            case 8:
+                keyfunc = zipfian(16001, 16300, keyDisttribution)
+                break;
+            case 4:
+            case 9:
+                keyfunc = zipfian(18001, 18300, keyDisttribution)
+                break;
+            default:
+                keyfunc = zipfian(10000, 10300, keyDisttribution)
+                break;
+        }
+        
         let key = keyfunc()
         contractArguments[0] = key.toString()
         contractArguments[1] = (key * constantMultiplier).toString()
