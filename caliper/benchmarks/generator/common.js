@@ -8,8 +8,8 @@ const getValues = require('./getValues');
 
 let filearray = [];
 let sizeKeySpace = 10000
-let keyDisttribution = 1
 const constantMultiplier = 100
+let keyDisttribution = 2
 const keyfunc = zipfian(sizeKeySpace, sizeKeySpace*2, keyDisttribution)
 
 /**
@@ -33,11 +33,13 @@ class CreateCarWorkload extends WorkloadModuleBase {
 	let args;
     let contractFunction = 'UpdatePlayCount'
     if (getValues.workloadType() == 0) {
-        contractFunction = deck.pick({'UpdatePlayCount': 10, 'CalculateRevenue': 1});
+        contractFunction = deck.pick({'UpdatePlayCount': 10, 'CalculateRevenue': 0});
     }
     else {
-        contractFunction = deck.pick({'UpdatePlayCount': 1, 'CalculateRevenue': 10});
+        contractFunction = deck.pick({'UpdatePlayCount': 10, 'CalculateRevenue': 1});
     }
+
+
     let contractArguments = new Array()
     let key = keyfunc()
     contractArguments[0] = key.toString()

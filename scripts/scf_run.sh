@@ -2,7 +2,7 @@
 
 # !TODO! Update hardcoded values
 
-tps=500
+tps=100
 # tps=(500 300 1000 300 1000 500)
 # index=0
 
