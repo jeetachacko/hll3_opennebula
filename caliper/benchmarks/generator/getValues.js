@@ -8,7 +8,7 @@ class getValues {
      }
      static functionType() {
           //functionType values: 0==Vanilla, 1==Delta
-          var functionType = 0
+          var functionType = 1
           return functionType
      }
 

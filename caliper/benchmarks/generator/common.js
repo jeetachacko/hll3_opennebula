@@ -33,10 +33,10 @@ class CreateCarWorkload extends WorkloadModuleBase {
 	let args;
     let contractFunction = 'UpdatePlayCount'
     if (getValues.workloadType() == 0) {
-        contractFunction = deck.pick({'UpdatePlayCount': 10, 'CalculateRevenue': 0});
+        contractFunction = deck.pick({'UpdatePlayCount': 10, 'CalculateRevenue': 2});
     }
     else {
-        contractFunction = deck.pick({'UpdatePlayCount': 10, 'CalculateRevenue': 1});
+        contractFunction = deck.pick({'UpdatePlayCount': 5, 'CalculateRevenue': 5});
     }
 
 

@@ -19,7 +19,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -28,7 +28,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -37,7 +37,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -46,7 +46,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -55,7 +55,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -64,7 +64,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -73,7 +73,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -82,7 +82,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -91,7 +91,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -100,7 +100,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -109,7 +109,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -118,7 +118,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -127,7 +127,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -136,7 +136,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -145,7 +145,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -154,7 +154,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -163,7 +163,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -172,7 +172,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -181,7 +181,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -190,7 +190,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -199,7 +199,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -208,7 +208,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -217,7 +217,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -226,7 +226,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -235,7 +235,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -244,7 +244,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -253,7 +253,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -262,7 +262,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -271,7 +271,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -280,7 +280,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -289,7 +289,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -298,7 +298,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -307,7 +307,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -316,7 +316,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -325,7 +325,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -334,7 +334,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -343,7 +343,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -352,7 +352,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -361,7 +361,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -370,7 +370,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -379,7 +379,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -388,7 +388,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -397,7 +397,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -406,7 +406,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -415,7 +415,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -424,7 +424,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -433,7 +433,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -442,7 +442,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -451,7 +451,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -460,7 +460,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -469,7 +469,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -478,7 +478,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -487,7 +487,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -496,7 +496,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -505,7 +505,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -514,7 +514,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -523,7 +523,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -532,7 +532,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -541,7 +541,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -550,7 +550,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -559,7 +559,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -568,7 +568,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -577,7 +577,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -586,7 +586,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -595,7 +595,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -604,7 +604,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -613,7 +613,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -622,7 +622,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -631,7 +631,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -640,7 +640,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -649,7 +649,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -658,7 +658,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -667,7 +667,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -676,7 +676,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -685,7 +685,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -694,7 +694,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -703,7 +703,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -712,7 +712,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -721,7 +721,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -730,7 +730,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -739,7 +739,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -748,7 +748,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -757,7 +757,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -766,7 +766,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -775,7 +775,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -784,7 +784,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -793,7 +793,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -802,7 +802,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -811,7 +811,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -820,7 +820,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -829,7 +829,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -838,7 +838,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -847,7 +847,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -856,7 +856,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -865,7 +865,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -874,7 +874,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -883,7 +883,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -892,7 +892,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -901,7 +901,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -910,7 +910,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -919,7 +919,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -928,7 +928,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -937,7 +937,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -946,7 +946,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -955,7 +955,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -964,7 +964,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -973,7 +973,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -982,7 +982,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -991,7 +991,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1000,7 +1000,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1009,7 +1009,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1018,7 +1018,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1027,7 +1027,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1036,7 +1036,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1045,7 +1045,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1054,7 +1054,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1063,7 +1063,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1072,7 +1072,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1081,7 +1081,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1090,7 +1090,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1099,7 +1099,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1108,7 +1108,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1117,7 +1117,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1126,7 +1126,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1135,7 +1135,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1144,7 +1144,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1153,7 +1153,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1162,7 +1162,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1171,7 +1171,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1180,7 +1180,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1189,7 +1189,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1198,7 +1198,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1207,7 +1207,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1216,7 +1216,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1225,7 +1225,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1234,7 +1234,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1243,7 +1243,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1252,7 +1252,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1261,7 +1261,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1270,7 +1270,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1279,7 +1279,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1288,7 +1288,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1297,7 +1297,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1306,7 +1306,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1315,7 +1315,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1324,7 +1324,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1333,7 +1333,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1342,7 +1342,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1351,7 +1351,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1360,7 +1360,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1369,7 +1369,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1378,7 +1378,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1387,7 +1387,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1396,7 +1396,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1405,7 +1405,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1414,7 +1414,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1423,7 +1423,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1432,7 +1432,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1441,7 +1441,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1450,7 +1450,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1459,7 +1459,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1468,7 +1468,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1477,7 +1477,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1486,7 +1486,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1495,7 +1495,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1504,7 +1504,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1513,7 +1513,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1522,7 +1522,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1531,7 +1531,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1540,7 +1540,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1549,7 +1549,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1558,7 +1558,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1567,7 +1567,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1576,7 +1576,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1585,7 +1585,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1594,7 +1594,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1603,7 +1603,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1612,7 +1612,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1621,7 +1621,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1630,7 +1630,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1639,7 +1639,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1648,7 +1648,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1657,7 +1657,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1666,7 +1666,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1675,7 +1675,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1684,7 +1684,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1693,7 +1693,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1702,7 +1702,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1711,7 +1711,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1720,7 +1720,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1729,7 +1729,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1738,7 +1738,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1747,7 +1747,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1756,7 +1756,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1765,7 +1765,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1774,7 +1774,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1783,7 +1783,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1792,7 +1792,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1801,7 +1801,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1810,7 +1810,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1819,7 +1819,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1828,7 +1828,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1837,7 +1837,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1846,7 +1846,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1855,7 +1855,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1864,7 +1864,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1873,7 +1873,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1882,7 +1882,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1891,7 +1891,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1900,7 +1900,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1909,7 +1909,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1918,7 +1918,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1927,7 +1927,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1936,7 +1936,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1945,7 +1945,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1954,7 +1954,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1963,7 +1963,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1972,7 +1972,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1981,7 +1981,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1990,7 +1990,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -1999,7 +1999,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2008,7 +2008,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2017,7 +2017,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2026,7 +2026,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2035,7 +2035,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2044,7 +2044,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2053,7 +2053,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2062,7 +2062,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2071,7 +2071,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2080,7 +2080,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2089,7 +2089,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2098,7 +2098,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2107,7 +2107,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2116,7 +2116,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2125,7 +2125,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2134,7 +2134,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2143,7 +2143,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2152,7 +2152,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2161,7 +2161,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2170,7 +2170,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2179,7 +2179,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2188,7 +2188,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2197,7 +2197,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2206,7 +2206,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2215,7 +2215,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2224,7 +2224,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2233,7 +2233,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2242,7 +2242,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2251,7 +2251,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2260,7 +2260,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2269,7 +2269,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2278,7 +2278,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2287,7 +2287,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2296,7 +2296,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2305,7 +2305,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2314,7 +2314,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2323,7 +2323,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2332,7 +2332,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2341,7 +2341,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2350,7 +2350,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2359,7 +2359,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2368,7 +2368,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2377,7 +2377,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2386,7 +2386,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2395,7 +2395,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2404,7 +2404,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2413,7 +2413,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2422,7 +2422,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2431,7 +2431,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2440,7 +2440,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2449,7 +2449,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2458,7 +2458,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2467,7 +2467,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2476,7 +2476,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2485,7 +2485,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2494,7 +2494,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2503,7 +2503,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2512,7 +2512,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2521,7 +2521,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2530,7 +2530,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2539,7 +2539,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2548,7 +2548,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2557,7 +2557,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2566,7 +2566,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2575,7 +2575,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2584,7 +2584,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2593,7 +2593,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2602,7 +2602,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2611,7 +2611,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2620,7 +2620,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2629,7 +2629,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2638,7 +2638,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2647,7 +2647,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2656,7 +2656,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2665,7 +2665,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2674,7 +2674,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2683,7 +2683,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2692,7 +2692,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2701,7 +2701,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2710,7 +2710,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2719,7 +2719,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2728,7 +2728,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2737,7 +2737,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2746,7 +2746,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2755,7 +2755,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2764,7 +2764,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2773,7 +2773,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2782,7 +2782,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2791,7 +2791,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2800,7 +2800,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2809,7 +2809,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2818,7 +2818,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2827,7 +2827,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2836,7 +2836,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2845,7 +2845,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2854,7 +2854,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2863,7 +2863,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2872,7 +2872,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2881,7 +2881,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2890,7 +2890,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2899,7 +2899,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2908,7 +2908,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2917,7 +2917,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2926,7 +2926,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2935,7 +2935,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2944,7 +2944,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2953,7 +2953,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2962,7 +2962,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2971,7 +2971,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2980,7 +2980,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2989,7 +2989,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -2998,7 +2998,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3007,7 +3007,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3016,7 +3016,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3025,7 +3025,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3034,7 +3034,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3043,7 +3043,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3052,7 +3052,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3061,7 +3061,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3070,7 +3070,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3079,7 +3079,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3088,7 +3088,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3097,7 +3097,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3106,7 +3106,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3115,7 +3115,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3124,7 +3124,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3133,7 +3133,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3142,7 +3142,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3151,7 +3151,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3160,7 +3160,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3169,7 +3169,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3178,7 +3178,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3187,7 +3187,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3196,7 +3196,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3205,7 +3205,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3214,7 +3214,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3223,7 +3223,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3232,7 +3232,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3241,7 +3241,7 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js
 
@@ -3250,6 +3250,6 @@ test:
       rateControl:
           type: fixed-rate
           opts:
-            tps: 500
+            tps: 100
       workload:
         module: /caliper-workload/common.js

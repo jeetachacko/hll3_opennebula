@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"time"
 	"github.com/hyperledger/fabric-contract-api-go/contractapi"
 	"strconv"
 )
@@ -56,42 +57,7 @@ func (s *SmartContract) DoNothing(ctx contractapi.TransactionContextInterface)  
 	return nil
 }
 
-// func (s *SmartContract) SwitchContractLogic(ctx contractapi.TransactionContextInterface, args []string) error {
-
-// 	value, _ := ctx.GetStub().GetState(args[0])
-// 	var asset Asset
-// 	json.Unmarshal(value, &asset)
-	
-// 	playCountIterator, err := ctx.GetStub().GetStateByPartialCompositeKey("varName~op~value~txID", []string{args[0]})
-// 	if err != nil {
-// 		return err
-// 	}
-// 	defer playCountIterator.Close()
-// 	playCount, _ := strconv.Atoi(asset.PlayCount)
-// 	for playCountIterator.HasNext() {
-// 		responseRange, _ := playCountIterator.Next()
-// 		_, compositeKeyParts, _ := ctx.GetStub().SplitCompositeKey(responseRange.Key)
-// 		if len(compositeKeyParts) > 1 {
-// 			value, _ := strconv.Atoi(compositeKeyParts[2])
-// 			playCount += value
-// 			ctx.GetStub().DelState(responseRange.Key)
-// 		}
-// 	}
-	
-// 	totalRevenue := playCount * 10
-// 	asset.TotalRevenue = strconv.Itoa(totalRevenue)
-// 	asset.PlayCount = strconv.Itoa(playCount)
-// 	assetBytes, _ := json.Marshal(asset)
-// 	ctx.GetStub().PutState(args[0], assetBytes)
-// 	return nil
-	
-// }
-
-
 func (s *SmartContract) UpdatePlayCount(ctx contractapi.TransactionContextInterface, args []string) error {
-	// if args[3] == "1" {
-	// 	s.SwitchContractLogic(ctx, args)
-	// }
 	if args[2] == "0" {
 		value, _ := ctx.GetStub().GetState(args[0])
 		var asset Asset
@@ -120,84 +86,21 @@ func (s *SmartContract) CalculateRevenue(ctx contractapi.TransactionContextInter
 	var asset Asset
 	json.Unmarshal(value, &asset)
 
-	playCountIterator, err := ctx.GetStub().GetStateByPartialCompositeKey("varName~op~value~txID", []string{args[0]})
+	//Delay to simulate reading all play count increment keys
+	time.Sleep(10 * time.Millisecond)
 
-	if err == nil {
-		defer playCountIterator.Close()
-		playCount, _ := strconv.Atoi(asset.PlayCount)
-	
-		for playCountIterator.HasNext() {
-			responseRange, _ := playCountIterator.Next()
-			_, compositeKeyParts, _ := ctx.GetStub().SplitCompositeKey(responseRange.Key)
-			if len(compositeKeyParts) > 1 {
-				value, _ := strconv.Atoi(compositeKeyParts[2])
-				playCount += value
-				ctx.GetStub().DelState(responseRange.Key)
-			}
-		}
-	
-		totalRevenue := playCount * 10
-		asset.TotalRevenue = strconv.Itoa(totalRevenue)
-		asset.PlayCount = strconv.Itoa(playCount)
-		assetBytes, _ := json.Marshal(asset)
-		ctx.GetStub().PutState(args[0], assetBytes)
-	} else {
-		playCount, _ := strconv.Atoi(asset.PlayCount)
-		totalRevenue := playCount * 10
-		asset.TotalRevenue = strconv.Itoa(totalRevenue)
-		assetBytes, _ := json.Marshal(asset)
-		ctx.GetStub().PutState(args[0], assetBytes)
-	}
+	playCount, _ := strconv.Atoi(asset.PlayCount)
+	playCount += 10
+	totalRevenue := playCount * 10
+	asset.TotalRevenue = strconv.Itoa(totalRevenue)
+	asset.PlayCount = strconv.Itoa(playCount)
+	assetBytes, _ := json.Marshal(asset)
+	ctx.GetStub().PutState(args[0], assetBytes)
 
 
 	return nil
 }
 
 
-
-// func (s *SmartContract) CalculateRevenue(ctx contractapi.TransactionContextInterface, args []string) error {
-// 	if args[3] == "1" {
-// 		s.SwitchContractLogic(ctx, args)
-// 	}
-// 	if args[2] == "0" {
-// 		value, _ := ctx.GetStub().GetState(args[0])
-// 		var asset Asset
-// 		json.Unmarshal(value, &asset)
-// 		playCount, _ := strconv.Atoi(asset.PlayCount)
-// 		totalRevenue := playCount * 10
-// 		asset.TotalRevenue = strconv.Itoa(totalRevenue)
-// 		assetBytes, _ := json.Marshal(asset)
-// 		ctx.GetStub().PutState(args[0], assetBytes)
-// 	}	else { //CalculateRevenueDelta
-// 		value, _ := ctx.GetStub().GetState(args[0])
-// 		var asset Asset
-// 		json.Unmarshal(value, &asset)
-	
-// 		playCountIterator, err := ctx.GetStub().GetStateByPartialCompositeKey("varName~op~value~txID", []string{args[0]})
-// 		if err != nil {
-// 			return err
-// 		}
-// 		defer playCountIterator.Close()
-// 		playCount, _ := strconv.Atoi(asset.PlayCount)
-	
-// 		for playCountIterator.HasNext() {
-// 			responseRange, _ := playCountIterator.Next()
-// 			_, compositeKeyParts, _ := ctx.GetStub().SplitCompositeKey(responseRange.Key)
-// 			if len(compositeKeyParts) > 1 {
-// 				value, _ := strconv.Atoi(compositeKeyParts[2])
-// 				playCount += value
-// 				ctx.GetStub().DelState(responseRange.Key)
-// 			}
-// 		}
-	
-// 		totalRevenue := playCount * 10
-// 		asset.TotalRevenue = strconv.Itoa(totalRevenue)
-// 		asset.PlayCount = strconv.Itoa(playCount)
-// 		assetBytes, _ := json.Marshal(asset)
-// 		ctx.GetStub().PutState(args[0], assetBytes)
-// 	}
-
-// 	return nil
-// }
 
 

@@ -15,6 +15,7 @@ rm /home/ubuntu/hll3_opennebula/check_caliper.txt
 rm /home/ubuntu/hll3_opennebula/tpsupdate.txt
 rm /home/ubuntu/hll3_opennebula/rlupdate.txt
 rm /home/ubuntu/hll3_opennebula/parser.txt
+rm /home/ubuntu/hll3_opennebula/restart.txt
 pkill -9 -f ./scripts/scf_run.sh
 pkill -9 -f ./scripts/network_run.sh
 pkill -9 -f ./scripts/configfile_gen.sh
